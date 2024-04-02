@@ -1,0 +1,12 @@
+pandas
+regex
+numpy
+tensorflow
+demoji
+keras
+underthesea
+transformers
+datasets==2.18
+emoji
+nltk
+matplotlib
