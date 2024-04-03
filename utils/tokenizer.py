@@ -1,4 +1,4 @@
-from transformers import TFAutoModel, AutoTokenizer
+from transformers import AutoTokenizer
 from utils.preprocess_text import preprocess
 import pandas as pd
 import numpy as np
