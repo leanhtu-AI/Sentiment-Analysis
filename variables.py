@@ -2,11 +2,9 @@ from datasets import load_dataset
 from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
 from utils.tf_format import to_tensorflow_format, preprocess_tokenized_dataset
 from config import BATCH_SIZE, MODEL_PATH
-
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
-
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.train import CheckpointOptions
 
@@ -37,15 +35,15 @@ val_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['val'], tokeniz
 test_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  tokenizer, y_test, BATCH_SIZE)
 print(train_tf_dataset)
 
-# Stop if no improvement after 5 epochs
-early_stop_callback = EarlyStopping(monitor='val_loss', patience=5, verbose=1)
-checkpoint_path = MODEL_PATH + '/checkpoints/cp-{epoch:03d}.keras'
-checkpoint_dir = os.path.dirname(checkpoint_path)
-# Create a callback that saves the model's weights every 10 epochs
+early_stopping = EarlyStopping(monitor='val_loss',patience=2, verbose=1)
+checkpoint_filepath = MODEL_PATH + '/checkpoints/1'
+
+# Define the ModelCheckpoint callback
 checkpoint_callback = ModelCheckpoint(
-    filepath = checkpoint_path,
-    save_best_only = True,
-    save_weights_only = False,
-    save_freq = 10 * STEPS_PER_EPOCH,
-    verbose = 1
+    filepath=checkpoint_filepath,
+    monitor='val_loss',  # Monitor validation loss
+    save_weights_only=False,
+    save_best_only=True,  # Save only the best model
+    mode='min',  # Mode for the monitored quantity: minimize validation loss
+    verbose=1
 )
