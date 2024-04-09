@@ -4,7 +4,7 @@ import emoji
 import demoji
 import underthesea
 from nltk import flatten
-from word_dict import replace_list
+from utils.word_dict import replace_list
 
 # Remove HTML code
 def remove_HTML(text):
