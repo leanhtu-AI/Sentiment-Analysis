@@ -155,10 +155,6 @@ def preprocess(text, word_tokenize = None):
     # return text.lower()
     return text
 
-# # Test funtion
-# text = preprocess("cũnggggg khhhhhông qqqqqqquá😎")
-# print(text)
-
 # Viết những hàm xử lí cho chuẩn hóa tiếng việt  
 # xử lí unicode  
 # Chuẩn hóa câu( xóa các tag html nếu có, xóa emoji, xóa khoảng trắng thừa)  
