@@ -1,16 +1,12 @@
 from datasets import load_dataset
 from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
 from utils.tf_format import to_tensorflow_format, preprocess_tokenized_dataset
-from config import BATCH_SIZE, MODEL_PATH
+from config import BATCH_SIZE, MODEL_PATH, TRAIN_PATH, TEST_PATH, VAL_PATH
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.train import CheckpointOptions
-
-TRAIN_PATH = "./data/Train_v2.csv"
-VAL_PATH = "./data/Val_v2.csv"
-TEST_PATH = "./data/Test_v2.csv"
 
 raw_datasets = load_dataset('csv', data_files={'train': TRAIN_PATH, 'val': VAL_PATH, 'test': TEST_PATH})
 
