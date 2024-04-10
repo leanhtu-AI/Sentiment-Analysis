@@ -1,6 +1,6 @@
 from transformers import TFAutoModel
-from variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, early_stopping, df_train, val_tf_dataset
-from config import EPOCHS, MODEL_PATH
+from utils.variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, early_stopping, df_train, val_tf_dataset
+from utils.config import EPOCHS, MODEL_PATH
 from utils.tokenizer import PRETRAINED_MODEL
 from create_model import create_model
 

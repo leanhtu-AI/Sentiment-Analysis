@@ -1,7 +1,7 @@
 from datasets import load_dataset
 from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
 from utils.tf_format import to_tensorflow_format, preprocess_tokenized_dataset
-from config import BATCH_SIZE, MODEL_PATH, TRAIN_PATH, TEST_PATH, VAL_PATH
+from utils.config import BATCH_SIZE, MODEL_PATH, TRAIN_PATH, TEST_PATH, VAL_PATH
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf

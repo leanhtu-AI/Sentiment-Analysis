@@ -3,8 +3,8 @@ from keras.layers import Input, Dense, Dropout, concatenate
 from keras.layers import Layer
 from tensorflow.keras.optimizers import AdamW
 from transformers import TFAutoModel
-from variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, df_train, val_tf_dataset
-from config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, MODEL_PATH
+from utils.variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, df_train, val_tf_dataset
+from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, MODEL_PATH
 from utils.tokenizer import PRETRAINED_MODEL
 
 
