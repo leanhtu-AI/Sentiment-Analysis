@@ -1,9 +1,3 @@
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
-from tensorflow.train import CheckpointOptions
-import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-import tensorflow as tf
-
 MODEL_PATH = 'model'
 
 MAX_SEQUENCE_LENGTH = 256
@@ -11,3 +5,7 @@ MAX_SEQUENCE_LENGTH = 256
 BATCH_SIZE = 20
 
 EPOCHS = 5
+
+TRAIN_PATH = "./data/Train_v2.csv"
+VAL_PATH = "./data/Val_v2.csv"
+TEST_PATH = "./data/Test_v2.csv"
