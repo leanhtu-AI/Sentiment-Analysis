@@ -1,9 +1,8 @@
 pandas
 regex
 numpy
-tensorflow
+tensorflow==2.15
 demoji
-keras
 underthesea
 transformers
 datasets==2.18
@@ -12,8 +11,6 @@ matplotlib
 streamlit
 requests
 streamlit_lottie
-streamlit_jupyter 
-plotly
 streamlit_chat
 streamlit_extras
 scikit-learn
