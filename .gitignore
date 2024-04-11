@@ -1,5 +1,3 @@
 __pycache__
-utils/__pycache__
 pred.ipynb
-data/preprocess_raw_data.ipynb
 model
