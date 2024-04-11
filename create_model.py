@@ -48,7 +48,7 @@ def create_model(pretrained_bert):
         )(x) for label in df_train.columns[1:]
     ], axis = -1)
 
-    optimizer = AdamW(learning_rate=1e-4, weight_decay=1e-4)  # Set your learning rate and weight decay
+    optimizer = AdamW(learning_rate=1e-4, weight_decay=5e-3)  # Set your learning rate and weight decay
     model = Model(inputs=inputs, outputs=outputs)
     model.compile(optimizer=optimizer, loss='binary_crossentropy')
     return model
