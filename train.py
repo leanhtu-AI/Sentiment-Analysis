@@ -1,5 +1,5 @@
 from transformers import TFAutoModel
-from utils.variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, early_stopping, df_train, val_tf_dataset
+from utils.variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, early_stopping, df_train, val_tf_dataset, checkpoint_callback
 from utils.config import EPOCHS, MODEL_PATH
 from utils.tokenizer import PRETRAINED_MODEL
 from create_model import create_model
@@ -15,9 +15,8 @@ def main():
         validation_steps=VALIDATION_STEPS,
         steps_per_epoch=STEPS_PER_EPOCH,
         epochs=EPOCHS,
-        callbacks=[early_stopping], 
+        callbacks=[early_stopping,checkpoint_callback], 
         verbose=1
     )
-    model.save(f'{MODEL_PATH}/1')
 if __name__ == "__main__":
     main()
