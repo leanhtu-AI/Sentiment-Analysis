@@ -6,6 +6,6 @@ BATCH_SIZE = 20
 
 EPOCHS = 5
 
-TRAIN_PATH = "./data/Train_v2.csv"
-VAL_PATH = "./data/Val_v2.csv"
-TEST_PATH = "./data/Test_v2.csv"
+TRAIN_PATH = "./data/Train.csv"
+VAL_PATH = "./data/Val.csv"
+TEST_PATH = "./data/Test.csv"
