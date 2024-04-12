@@ -3,8 +3,9 @@ from keras.layers import Input, Dense, Dropout, concatenate
 from keras.layers import Layer
 from tensorflow.keras.optimizers import AdamW
 from transformers import TFAutoModel
-from utils.variables import train_tf_dataset, STEPS_PER_EPOCH, VALIDATION_STEPS, df_train, val_tf_dataset
-from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, MODEL_PATH
+from utils.variables import STEPS_PER_EPOCH, VALIDATION_STEPS, df_train
+from utils.tf_dataset import val_tf_dataset, train_tf_dataset
+from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, MODEL_PATH, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT
 from utils.tokenizer import PRETRAINED_MODEL
 
 
@@ -34,10 +35,10 @@ def create_model(pretrained_bert):
     # Combine hidden states
     pooled_output = concatenate(
         tuple([hidden_states[i] for i in range(-4, 0)]),
-        name = 'last_5_hidden_states',
+        name = 'last_4_hidden_states',
         axis = -1
     )[:, 0, :]
-    x = Dropout(0.3)(pooled_output)
+    x = Dropout(DROP_OUT)(pooled_output)
     print(pooled_output)
 
     outputs = concatenate([
@@ -48,8 +49,9 @@ def create_model(pretrained_bert):
         )(x) for label in df_train.columns[1:]
     ], axis = -1)
 
-    optimizer = AdamW(learning_rate=1e-4, weight_decay=5e-3)  # Set your learning rate and weight decay
+    optimizer = AdamW(learning_rate=LEARNING_RATE, weight_decay=WEIGHT_DECAY)  # Set your learning rate and weight decay
     model = Model(inputs=inputs, outputs=outputs)
     model.compile(optimizer=optimizer, loss='binary_crossentropy')
     return model
+
 
