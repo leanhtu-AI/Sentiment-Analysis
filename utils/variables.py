@@ -32,14 +32,14 @@ test_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  toke
 print(train_tf_dataset)
 
 early_stopping = EarlyStopping(monitor='val_loss',patience=1, verbose=1)
-# checkpoint_filepath = MODEL_PATH + '/1.h5'
+checkpoint_filepath = MODEL_PATH + '/best.h5'
 
-# # Define the ModelCheckpoint callback
-# checkpoint_callback = ModelCheckpoint(
-#     filepath=checkpoint_filepath,
-#     monitor='val_loss',  # Monitor validation loss
-#     save_weights_only=True,
-#     save_best_only=True,  # Save only the best model
-#     mode='min',  # Mode for the monitored quantity: minimize validation loss
-#     verbose=1
-# )
+# Define the ModelCheckpoint callback
+checkpoint_callback = ModelCheckpoint(
+    filepath=checkpoint_filepath,
+    monitor='val_loss',  # Monitor validation loss
+    save_weights_only=True,
+    save_best_only=True,  # Save only the best model
+    mode='min',  # Mode for the monitored quantity: minimize validation loss
+    verbose=1
+)
