@@ -7,6 +7,7 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.train import CheckpointOptions
+import pandas as pd
 
 raw_datasets = load_dataset('csv', data_files={'train': TRAIN_PATH, 'val': VAL_PATH, 'test': TEST_PATH})
 
@@ -25,11 +26,6 @@ y_test = make_outputs(df_test)
 tokenizer = call_tokenizer()
 
 tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
-
-train_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['train'], tokenizer, y_train, BATCH_SIZE, shuffle=True)
-val_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['val'], tokenizer, y_val, BATCH_SIZE)
-test_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  tokenizer, y_test, BATCH_SIZE)
-print(train_tf_dataset)
 
 early_stopping = EarlyStopping(monitor='val_loss',patience=1, verbose=1)
 checkpoint_filepath = MODEL_PATH + '/best.h5'
