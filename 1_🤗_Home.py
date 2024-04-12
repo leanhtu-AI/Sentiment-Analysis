@@ -130,4 +130,4 @@ elif choice == 'About us':
         lottie_col1 = load_lottiefile("lottiefiles/github.json")
         st_lottie(lottie_col1, speed=1, loop=True, quality="low")
         
-    st.markdown("<h4 style='text-align: center; color: black; opacity: 0.5;'>ありがとう ございます</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color: black; opacity: 0.5;'>ありがとう ございます。</h4>", unsafe_allow_html=True)
