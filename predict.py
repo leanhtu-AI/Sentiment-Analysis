@@ -12,7 +12,7 @@ from tensorflow.data import Dataset
 
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
 reloaded_model = create_model(pretrained_bert)
-reloaded_model.load_weights(f"{MODEL_PATH}/anhtu1.h5")
+reloaded_model.load_weights(f"{MODEL_PATH}/best.h5")
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
@@ -52,10 +52,11 @@ def show_predict_csv(df_clean, output_csv_path):
     for i in range(len(pred)):
         absa_pred = print_acsa_pred(replacements, categories, pred[i])
         results.append(absa_pred)
-
+    df_source = pd.read_csv("data_user/raw.csv")
     # Append predictions to the original DataFrame
-    df_input_with_pred = df_clean.copy()
+    df_input_with_pred = df_source.copy()
     df_input_with_pred['label'] = results
 
     # Save the DataFrame with predictions to a new CSV file
     df_input_with_pred.to_csv(output_csv_path, index=False)
+
