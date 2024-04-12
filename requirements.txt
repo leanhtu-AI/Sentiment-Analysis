@@ -11,6 +11,3 @@ matplotlib
 streamlit
 requests
 streamlit_lottie
-streamlit_chat
-streamlit_extras
-scikit-learn
