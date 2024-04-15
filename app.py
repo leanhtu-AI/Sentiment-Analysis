@@ -9,11 +9,11 @@ from utils.preprocess_user_data import auto_detect_filter_data
 from utils.preprocess_user_data import preprocess_data
 from utils.tokenizer import tokenize_function, call_tokenizer
 from utils.preprocess_text import preprocess
-from predict import show_predict_text,show_predict_csv
+from predict import show_predict_text,process_predict_csv, show_predict_csv
 from annotated_text import annotated_text
 
 st.set_page_config(
-    page_title="ML APP",
+    page_title="ABSA APP",
     page_icon="👋",
 )
 
@@ -40,7 +40,7 @@ if choice == 'Home':
     st.title("こんにちは! Welcome to our ABSA web app😊")
     st_lottie(lottie_robot, speed=1, loop=True, quality="low")
     # snowfall
-    if st.button("きれいなゆき・Bông tuyết trong sạch]🤡"):
+    if st.button("きれいなゆき・Bông tuyết trong sạch🤡"):
         st.snow()
 
 elif choice == 'Upload':
@@ -87,10 +87,12 @@ elif choice in ['Apply ABSA']:
             df_detect = pd.read_csv(output_path, index_col=None)
             df_clean = preprocess_data(df_detect)
             output_csv_path = "data_user/data_with_label.csv"  # Specify output CSV file path
-            show_predict_csv(df_clean, output_csv_path)
-            read = pd.read_csv(output_csv_path)
-            st.dataframe(read)
-
+            process_predict_csv(df_clean, output_csv_path)
+            df = pd.read_csv(output_csv_path)
+            show = show_predict_csv()
+            st.dataframe(show)
+            if st.button('Click here if you want know more details🫶'):
+                st.dataframe(df)
 elif choice == 'About us':
     st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
     url_company = "https://jvb-corp.com/vi/"
@@ -101,7 +103,7 @@ elif choice == 'About us':
         st.markdown("<h2 style='color: black;'>🤝Our Organization🤝</h2>", unsafe_allow_html=True)
         annotated_text(
             "Hi, I'm",
-            ("JVB-Junior", "", "#faa"),
+            ("Junior-VB", "", "#faa"),
             "🤖"
         )
         st.markdown("""- I was created by a team of AI interns from JVB Vietnam company.\n - Beside ABSA model, we also provide other technology solutions.\n - Check out this [link](%s) for more information about our group""" % url_company)

@@ -1,12 +1,13 @@
 from datasets import load_dataset
 from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
-from utils.tf_format import to_tensorflow_format, preprocess_tokenized_dataset
 from utils.config import BATCH_SIZE, MODEL_PATH, TRAIN_PATH, TEST_PATH, VAL_PATH
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.train import CheckpointOptions
+import pandas as pd
+from utils.tf_format import preprocess_tokenized_dataset
 
 raw_datasets = load_dataset('csv', data_files={'train': TRAIN_PATH, 'val': VAL_PATH, 'test': TEST_PATH})
 
@@ -29,17 +30,16 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 train_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['train'], tokenizer, y_train, BATCH_SIZE, shuffle=True)
 val_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['val'], tokenizer, y_val, BATCH_SIZE)
 test_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  tokenizer, y_test, BATCH_SIZE)
-print(train_tf_dataset)
 
 early_stopping = EarlyStopping(monitor='val_loss',patience=1, verbose=1)
-# checkpoint_filepath = MODEL_PATH + '/1.h5'
+checkpoint_filepath = MODEL_PATH + '/best.h5'
 
-# # Define the ModelCheckpoint callback
-# checkpoint_callback = ModelCheckpoint(
-#     filepath=checkpoint_filepath,
-#     monitor='val_loss',  # Monitor validation loss
-#     save_weights_only=True,
-#     save_best_only=True,  # Save only the best model
-#     mode='min',  # Mode for the monitored quantity: minimize validation loss
-#     verbose=1
-# )
+# Define the ModelCheckpoint callback
+checkpoint_callback = ModelCheckpoint(
+    filepath=checkpoint_filepath,
+    monitor='val_loss',  # Monitor validation loss
+    save_weights_only=True,
+    save_best_only=True,  # Save only the best model
+    mode='min',  # Mode for the monitored quantity: minimize validation loss
+    verbose=1
+)

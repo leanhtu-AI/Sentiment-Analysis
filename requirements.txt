@@ -8,9 +8,7 @@ transformers
 datasets==2.18
 nltk
 matplotlib
-streamlit
+streamlit==1.23
 requests
 streamlit_lottie
-streamlit_chat
-streamlit_extras
-scikit-learn
+st-annotated-text
