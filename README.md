@@ -3,7 +3,7 @@
   <br>
   <a href=""><img src="https://t4.ftcdn.net/jpg/06/82/81/33/360_F_682813378_Mb1bNS72oaJvoKwWpGcSvrqeK4HBkekf.jpg" alt="Wall-JuniorVB🤖" width="300"></a>
   <br>
-  Wall-JuniorVB🤖
+  Junior-VB🤖
   <br>
 </h1>
 
@@ -49,7 +49,7 @@
 
 ## 📈About Model
 ### 🤝Pre-trained Model And Fine-tuning
- - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for out problem and the inspire of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
+ - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for our  problem and the inspire of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
  - You can read more details in this [paper](https://github.com/ds4v/absa-vlsp-2018/blob/main/Paper.pdf).
  - With our model, we use more slower learning rate and small weight decay of AdamW for more aspect and more data and it performance look better.
 
