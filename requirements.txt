@@ -7,7 +7,6 @@ underthesea
 transformers
 datasets==2.18
 nltk
-matplotlib
 streamlit==1.23
 requests
 streamlit_lottie
