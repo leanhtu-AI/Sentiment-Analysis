@@ -33,9 +33,9 @@
   <a href="#license">License</a>
 </p>
 
-<div align="center">
+<p align="center">
   <img src="lottiefiles/example.gif" alt="Alt Text">
-</div>
+<p>
 
 ## 🤗About Web
 
