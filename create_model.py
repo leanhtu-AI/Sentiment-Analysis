@@ -4,7 +4,7 @@ from keras.layers import Layer
 from tensorflow.keras.optimizers import AdamW
 from transformers import TFAutoModel
 from utils.variables import STEPS_PER_EPOCH, VALIDATION_STEPS, df_train,val_tf_dataset,train_tf_dataset
-from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, MODEL_PATH, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT
+from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT
 from utils.tokenizer import PRETRAINED_MODEL
 
 
