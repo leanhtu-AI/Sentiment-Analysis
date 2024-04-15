@@ -1,6 +1,6 @@
 from datasets import load_dataset
 from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
-from utils.config import BATCH_SIZE, MODEL_PATH, TRAIN_PATH, TEST_PATH, VAL_PATH
+from utils.config import BATCH_SIZE, TRAIN_PATH, TEST_PATH, VAL_PATH
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
@@ -32,7 +32,7 @@ val_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['val'], tokeniz
 test_tf_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  tokenizer, y_test, BATCH_SIZE)
 
 early_stopping = EarlyStopping(monitor='val_loss',patience=1, verbose=1)
-checkpoint_filepath = MODEL_PATH + '/best.h5'
+checkpoint_filepath = './model/best.h5'
 
 # Define the ModelCheckpoint callback
 checkpoint_callback = ModelCheckpoint(
