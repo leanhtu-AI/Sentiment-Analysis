@@ -1,6 +1,5 @@
 import regex as re
 import string
-import emoji
 import demoji
 import underthesea
 from nltk import flatten
