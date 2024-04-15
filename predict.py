@@ -1,7 +1,6 @@
 from tensorflow.train import latest_checkpoint
 from tensorflow.keras.models import load_model
 from create_model import create_model
-from utils.config import MODEL_PATH
 from transformers import TFAutoModel
 from utils.tokenizer import PRETRAINED_MODEL
 from utils.variables import df_test, tokenizer
@@ -13,7 +12,7 @@ import pandas as pd
 
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
 reloaded_model = create_model(pretrained_bert)
-reloaded_model.load_weights(f"{MODEL_PATH}/best.h5")
+reloaded_model.load_weights(f"./model/best.h5")
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
 
