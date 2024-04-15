@@ -78,6 +78,12 @@ $ python train.py
 > [!NOTE]  
 > We use the Windows command, if you are running on MacOS or Linux, it can be different a bit.
 
+### Results
+ - You can visit our report for more information about the data, preprocessing and experiment.
+ - Below is our best performance!
+<p align="center">
+  <img src="lottiefiles/image.png" alt="Alt Text">
+<p>
 ## 👉Credits
 This repo uses the following open source packages:
 - [Tensorflow](https://www.tensorflow.org/?hl=vi)
