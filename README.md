@@ -84,6 +84,7 @@ $ python train.py
 <p align="center">
   <img src="lottiefiles/image.png" alt="Alt Text">
 <p>
+
 ## 👉Credits
 This repo uses the following open source packages:
 - [Tensorflow](https://www.tensorflow.org/?hl=vi)
