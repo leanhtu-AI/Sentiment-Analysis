@@ -106,16 +106,6 @@ def process_predict_csv(df_clean, output_csv_path):
     df_input_with_pred['label'] = results
     df_input_with_pred.to_csv(output_csv_path, index=False)
     
-# Predict on test dataset
-def print_acsa_pred_test(replacements, categories, sentence_pred):
-    sentiments = map(lambda x: replacements[x], sentence_pred)
-    for category, sentiment in zip(categories, sentiments):
-        if sentiment: print(f'=> {category},{sentiment}')
-def predict_test(model, inputs, batch_size=1, verbose=0):
-    y_pred = model.predict(inputs, batch_size=batch_size, verbose=verbose)
-    y_pred = y_pred.reshape(len(y_pred), -1, 4)
-    return np.argmax(y_pred, axis=-1) # sentiment values (position that have max value)
-
 # final_output_with star file csv
 def extract_first_last(text):
     parts = text.split(',')
