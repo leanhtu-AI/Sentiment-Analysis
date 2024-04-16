@@ -7,7 +7,7 @@ underthesea
 transformers
 datasets==2.18
 nltk
-streamlit==1.23
+streamlit==1.33
 requests
 streamlit_lottie
 st-annotated-text
