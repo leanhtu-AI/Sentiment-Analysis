@@ -12,11 +12,6 @@ from utils.preprocess_text import preprocess
 from predict import show_predict_text,process_predict_csv, show_predict_csv
 from annotated_text import annotated_text
 
-st.set_page_config(
-    page_title="ABSA APP",
-    page_icon="👋",
-)
-
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
     st.session_state.file_uploaded = False
