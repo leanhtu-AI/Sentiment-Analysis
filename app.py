@@ -64,15 +64,30 @@ elif choice == 'Upload':
     st.title("Upload your data here")
     file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
     if file:
+        # Initialize the progress bar with 0%
+        progress_bar = st.progress(0)
+
+        # Reading the CSV file - set progress to 10%
         df = pd.read_csv(file, index_col=None)
+        progress_bar.progress(30)  # Update the progress bar to 30%
+
+        # Saving the CSV file - update progress to 60%
         df.to_csv('data_user/source.csv', index=None)
-        st.dataframe(df,use_container_width=True)
-        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
+        progress_bar.progress(60)
+
+        # Display the DataFrame in the UI - update progress to 90%
+        st.dataframe(df, use_container_width=True)
+        progress_bar.progress(90)
+
+        # Notify success and finalize progress to 100%
+        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
+        progress_bar.progress(100)
         st.session_state.file_uploaded = True
 elif choice in ['Apply ABSA']:
     if not st.session_state.file_uploaded:
         st.warning("Please upload a file first before proceeding to this step.")
     else:       
+        absa_applied = False  # Flag to track whether ABSA has been applied
         if choice == "Apply ABSA":
             lottie_data_to_ai = load_lottiefile("lottiefiles/data_to_ai.json")
             st_lottie(lottie_data_to_ai, speed=1, loop=True, quality="low")    
@@ -83,11 +98,23 @@ elif choice in ['Apply ABSA']:
             df_clean = preprocess_data(df_detect)
             output_csv_path = "data_user/data_with_label.csv"  # Specify output CSV file path
             process_predict_csv(df_clean, output_csv_path)
-            df = pd.read_csv(output_csv_path)
             show = show_predict_csv()
             st.dataframe(show)
-            if st.button('Click here if you want know more details🫶'):
+
+            absa_applied = True  # Set flag to True indicating ABSA has been applied
+
+        if choice == "More infomation":
+            if not absa_applied:
+                st.warning("Please apply ABSA first!")
+            else:
+                st.header('Want to Deeper Understand? Ok!👌', divider='rainbow')
+                df = pd.read_csv(output_csv_path)
                 st.dataframe(df)
+                len_df = len(df)
+                nan_rows = df[df.isna().any(axis=1)]
+                num_predictors = len(nan_rows)
+                st.info(f"We have successfully predicted for {num_predictors}/{len_df} reviews ⭐", icon="ℹ️")
+                
 elif choice == 'About us':
     st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
     url_company = "https://jvb-corp.com/vi/"
