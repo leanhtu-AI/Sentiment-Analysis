@@ -15,14 +15,13 @@ import streamlit as st
 @st.cache_resource
 def load_model():
     if not os.path.isfile('model.h5'):
-        urllib.request.urlretrieve('https://github.com/leanhtu-AI/Sentiment-Analysis/raw/main/model/best.h5', 'model/model.h5')
+        urllib.request.urlretrieve('https://drive.google.com/uc?id=1ObuWtSqmPIaMwWV8N6GgWSIYmimihVES&export=download', 'model/model.h5')
         pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
         reloaded_model = create_model(pretrained_bert)
         reloaded_model.load_weights('model/model.h5')
         return reloaded_model
 
 reloaded_model = load_model()
-reloaded_model.summary()
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
