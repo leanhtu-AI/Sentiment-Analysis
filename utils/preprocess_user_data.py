@@ -10,7 +10,7 @@ def auto_detect_filter_data(input_path, output_path):
     df = pd.read_csv(input_path)
     
     # Giả định cột đánh giá là cột văn bản có độ dài trung bình cao nhất
-    text_length = df.map(lambda x: len(str(x))).mean()
+    text_length = df.applymap(lambda x: len(str(x))).mean()
     review_column = text_length.idxmax()
 
     # Lọc và lưu cột đánh giá
@@ -24,3 +24,5 @@ def preprocess_data(df):
         df[column] = df[column].apply(preprocess)
     return df
 
+# def take_info(df):
+    
