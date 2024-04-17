@@ -124,9 +124,9 @@ if choice in ['Apply ABSA']:
         st.session_state.absa_applied = True  # Set flag to True indicating ABSA has been applied
         
 elif choice == "More information":
-    # if not st.session_state.absa_applied:
-    #     st.warning("Please apply ABSA first!")
-    # else:
+    if not st.session_state.absa_applied:
+        st.warning("Please apply ABSA first!")
+    else:
         st.header('Want to Deeper Understand? Ok!👌', divider='rainbow')
         df = pd.read_csv("data_user/data_with_label.csv")
         st.dataframe(df)
