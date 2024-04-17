@@ -5,12 +5,13 @@ from streamlit_lottie import st_lottie
 import time
 import pandas as pd
 import os
-from utils.preprocess_user_data import auto_detect_filter_data
+from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency
 from utils.preprocess_user_data import preprocess_data
 from utils.tokenizer import tokenize_function, call_tokenizer
 from utils.preprocess_text import preprocess
 from predict import show_predict_text,process_predict_csv, show_predict_csv
-from annotated_text import annotated_text
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
@@ -21,6 +22,40 @@ def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
     
+def plot_aspect_frequency(aspect_df):
+  ## Tạo biểu đồ cột
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.bar(aspect_df['Aspect'], aspect_df['Frequency'], color='skyblue')
+    
+    # Thêm tiêu đề và nhãn trục
+    ax.set_title('Frequency of Aspects')
+    ax.set_xlabel('Aspect')
+    ax.set_ylabel('Frequency')
+    
+    # Xoay nhãn trục x
+    ax.tick_params(axis='x', rotation=45)
+    
+    # Thay đổi màu của các thanh cột
+    for bar in bars:
+        bar.set_color('skyblue')
+    
+    # Hiển thị biểu đồ
+    st.pyplot(fig)
+    
+def plot_sentiment_frequencies(sentiment_df):
+    # Set seaborn color palette
+    sns.set_palette("Set3")
+
+    # Plot pie chart using matplotlib
+    fig, ax = plt.subplots(figsize=(6, 6))  # smaller size
+    ax.pie(sentiment_df['frequency'], labels=sentiment_df['sentiments'], autopct='%1.1f%%', startangle=90)
+    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    # Add legend
+    ax.legend(sentiment_df['sentiments'], loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
+
+    # Display pie chart using Streamlit
+    st.pyplot(fig)
+
 lottie_ai = load_lottiefile("lottiefiles/logo.json")
 lottie_robot = load_lottiefile("lottiefiles/robot_orange.json")
 
@@ -28,8 +63,9 @@ lottie_robot = load_lottiefile("lottiefiles/robot_orange.json")
 with st.sidebar:
     st_lottie(lottie_ai, speed=1, loop=True, quality="low")
     st.info("Select a choice below.")
-    choice = st.radio('Navigation',['Home','Upload','Apply ABSA','About us'])
-
+    choice = st.radio('Navigation',['Home','Upload','Apply ABSA','More information','About us'])
+if 'absa_applied' not in st.session_state:
+    st.session_state.absa_applied = False  # Initialize the flag if it doesn't exist in session state
 # hanlde choice
 if choice == 'Home':
     st.title("こんにちは! Welcome to our ABSA web app😊")
@@ -64,57 +100,63 @@ elif choice == 'Upload':
     st.title("Upload your data here")
     file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
     if file:
-        # Initialize the progress bar with 0%
-        progress_bar = st.progress(0)
-
-        # Reading the CSV file - set progress to 10%
         df = pd.read_csv(file, index_col=None)
-        progress_bar.progress(30)  # Update the progress bar to 30%
-
-        # Saving the CSV file - update progress to 60%
         df.to_csv('data_user/source.csv', index=None)
-        progress_bar.progress(60)
-
-        # Display the DataFrame in the UI - update progress to 90%
-        st.dataframe(df, use_container_width=True)
-        progress_bar.progress(90)
-
-        # Notify success and finalize progress to 100%
-        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
-        progress_bar.progress(100)
+        st.dataframe(df,use_container_width=True)
+        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
         st.session_state.file_uploaded = True
-elif choice in ['Apply ABSA']:
+if choice in ['Apply ABSA']:
     if not st.session_state.file_uploaded:
         st.warning("Please upload a file first before proceeding to this step.")
-    else:       
-        absa_applied = False  # Flag to track whether ABSA has been applied
-        if choice == "Apply ABSA":
-            lottie_data_to_ai = load_lottiefile("lottiefiles/data_to_ai.json")
-            st_lottie(lottie_data_to_ai, speed=1, loop=True, quality="low")    
-            input_path = "data_user/source.csv"
-            output_path = "data_user/raw.csv"
-            auto_detect_filter_data(input_path, output_path)
-            df_detect = pd.read_csv(output_path, index_col=None)
-            df_clean = preprocess_data(df_detect)
-            output_csv_path = "data_user/data_with_label.csv"  # Specify output CSV file path
-            process_predict_csv(df_clean, output_csv_path)
-            show = show_predict_csv()
-            st.dataframe(show)
+    else:               
+        lottie_data_to_ai = load_lottiefile("lottiefiles/data_to_ai.json")
+        st_lottie(lottie_data_to_ai, speed=1, loop=True, quality="low")    
+        input_path = "data_user/source.csv"
+        output_path = "data_user/raw.csv"
+        auto_detect_filter_data(input_path, output_path)
+        df_detect = pd.read_csv(output_path, index_col=None)
+        df_clean = preprocess_data(df_detect)
+        output_csv_path = "data_user/data_with_label.csv"  # Specify output CSV file path
+        process_predict_csv(df_clean, output_csv_path)
+        show = show_predict_csv()
+        st.dataframe(show)
 
-            absa_applied = True  # Set flag to True indicating ABSA has been applied
+        st.session_state.absa_applied = True  # Set flag to True indicating ABSA has been applied
+        
+elif choice == "More information":
+    # if not st.session_state.absa_applied:
+    #     st.warning("Please apply ABSA first!")
+    # else:
+        st.header('Want to Deeper Understand? Ok!👌', divider='rainbow')
+        df = pd.read_csv("data_user/data_with_label.csv")
+        st.dataframe(df)
+        len_df = len(df)
+        nan_rows = df[df.isna().any(axis=1)]
+        num_predictors = len(nan_rows)
+        st.info(f"We have successfully predicted for {len_df - num_predictors}/{len_df} reviews.", icon="⭐")
+        if st.button("Click here if you want to insight the data which are not yet predicted"):
+            st.dataframe(nan_rows)
+        st.divider()
+        st.subheader("Let's Explore Your Data")
+        aspect_df = take_info(df)
+        # Example list of sorted top aspect names
+        top_aspect_names = aspect_df.nlargest(3, 'Frequency')['Aspect'].tolist()
+        sorted_top_aspect_names = aspect_df[aspect_df['Aspect'].isin(top_aspect_names)].sort_values(by='Frequency', ascending=False)['Aspect'].tolist()
+        # Create the HTML string with the sorted aspect names
+        html_str = f"<p style='color: black;'>🐙Top 3 aspects that customers are concerned about: "
+        for aspect in sorted_top_aspect_names:
+            html_str += f" {aspect},"
+        html_str = html_str[:-1]  # Remove the last comma
+        html_str += "💕</p>"
+        # Display the HTML string using st.markdown()
+        st.markdown(html_str, unsafe_allow_html=True)        
+        plot_aspect_frequency(aspect_df)
+        st.divider()
+        st.markdown("<p color: black;'>Percentage of sentimens</p>", unsafe_allow_html=True)
+        sentiment_df = sentiments_frequency(df)
+        plot_sentiment_frequencies(sentiment_df)
 
-        if choice == "More infomation":
-            if not absa_applied:
-                st.warning("Please apply ABSA first!")
-            else:
-                st.header('Want to Deeper Understand? Ok!👌', divider='rainbow')
-                df = pd.read_csv(output_csv_path)
-                st.dataframe(df)
-                len_df = len(df)
-                nan_rows = df[df.isna().any(axis=1)]
-                num_predictors = len(nan_rows)
-                st.info(f"We have successfully predicted for {num_predictors}/{len_df} reviews ⭐", icon="ℹ️")
-                
+# Gọi hàm để vẽ biểu đồ
 elif choice == 'About us':
     st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
     url_company = "https://jvb-corp.com/vi/"
