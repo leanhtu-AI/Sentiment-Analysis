@@ -49,11 +49,20 @@
 
 ## 📈About Model
 ### 🤝Pre-trained Model And Fine-tuning
- - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for our  problem and the inspire of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
+ - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for our problem and were inspired of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
  - You can read more details in this [paper](https://github.com/ds4v/absa-vlsp-2018/blob/main/Paper.pdf).
- - With our model, we use more slower learning rate and small weight decay of AdamW for more aspect and more data and it performance look better.
+ - With our model, we fine tune by use slow learning rate (1e-4) and small weight decay (5e-3) of AdamW because of more aspect and data. In the 3 last pooling layers, it performance look quite better than anything.
 
-### 🧑‍💻How To Use
+### 🌊Results
+ - You can visit our report for more information about the data, preprocessing and experiment setup.
+ - Best result:
+Tasks | Precision | Recall | F1-Score | Accuracy 
+ --- | --- | --- | --- 
+Aspect Detection | | | 
+Polarity Detection | | |
+Aspect + Polarity | | | 
+
+## 🧑‍💻How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Pip](https://pip.pypa.io/en/stable/installation/) installed on your computer. From your command line:
 
@@ -77,13 +86,6 @@ $ python train.py
 
 > [!NOTE]  
 > We use the Windows command, if you are running on MacOS or Linux, it can be different a bit.
-
-### Results
- - You can visit our report for more information about the data, preprocessing and experiment.
- - Below is our best performance!
-<p align="center">
-  <img src="lottiefiles/image.png" alt="Alt Text">
-<p>
 
 ## 👉Credits
 This repo uses the following open source packages:
