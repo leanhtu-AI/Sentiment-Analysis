@@ -62,11 +62,11 @@ Aspect Detection | | |
 Polarity Detection | | |
 Aspect + Polarity | | | 
 
-Model | #params | Arch.	 | Max length | Pre-training data | License
----|---|---|---|---|---
-[`vinai/phobert-base-v2`](https://huggingface.co/vinai/phobert-base-v2) | 135M | base | 256 | 20GB  of Wikipedia and News texts + 120GB of texts from OSCAR-2301 | [GNU Affero GPL v3](https://github.com/VinAIResearch/PhoBERT/blob/master/LICENSE_for_PhoBERT_v2)
-[`vinai/phobert-base`](https://huggingface.co/vinai/phobert-base) | 135M | base | 256 | 20GB  of Wikipedia and News texts | [MIT License](https://github.com/VinAIResearch/PhoBERT/blob/master/LICENSE)
-[`vinai/phobert-large`](https://huggingface.co/vinai/phobert-large) | 370M | large | 256 | 20GB  of Wikipedia and News texts | [MIT License](https://github.com/VinAIResearch/PhoBERT/blob/master/LICENSE)
+Tasks | Precision | Recall  | F1-Score | 
+---|---|---|---
+Aspect Detection | 0.89 | 0.86 | 0.87 | 0.93 
+Polarity Detection | 0.79 | 0.78 | 0.79 | 0.91
+Aspect + Polarity | 0.73 | 0.68 | 0.69 | 0.91
 
 ## 🧑‍💻How To Use
 
