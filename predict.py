@@ -12,6 +12,8 @@ import pandas as pd
 import urllib.request
 import os
 import streamlit as st
+
+# web services
 @st.cache_resource
 def load_model():
     if not os.path.isfile('model.h5'):
@@ -22,7 +24,11 @@ def load_model():
         return reloaded_model
 
 reloaded_model = load_model()
-reloaded_model.summary()
+
+# # local
+# pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+# reloaded_model = create_model(pretrained_bert)
+# reloaded_model.load_weights('model/best.h5')
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
