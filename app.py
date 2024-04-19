@@ -12,6 +12,8 @@ from utils.preprocess_text import preprocess
 from predict import show_predict_text,process_predict_csv, show_predict_csv
 import matplotlib.pyplot as plt
 import seaborn as sns
+from annotated_text import annotated_text
+
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
@@ -75,33 +77,32 @@ if choice == 'Home':
         st.snow()
 
 elif choice == 'Upload':
-    if 'ready_to_input' not in st.session_state:
-        st.session_state['ready_to_input'] = False
+    # Initialize session state variable if not already present
+    st.subheader("🤖📢 Before upload, test our model if you want to know what we will do 👌")
 
-    # Nút để bắt đầu nhập liệu
-    if st.button('🤖📢Before upload, please press me if you want to know what we will do👌'):
-        st.session_state['ready_to_input'] = True  # Đặt trạng thái sẵn sàng nhập
+    # Text input for user review about smartphone
+    user_input = st.text_input("Enter some review about your smartphone 👇", 
+                          placeholder="This is a placeholder...")
 
-    # Nếu trạng thái sẵn sàng nhập là True, hiển thị ô nhập văn bản
-    if st.session_state['ready_to_input']:
-        user_input = st.text_input("Enter some review about your smartphone 👇", key='user_input',placeholder="This is a placeholder...")
-
-        # Nếu người dùng nhấn Enter trong ô nhập liệu (text_input luôn trả về giá trị, kể cả chuỗi rỗng)
-        if 'user_input' in st.session_state and st.session_state.user_input != '':
-            text = st.session_state.user_input
-            results = show_predict_text(text)
-            if results is not None:  # Kiểm tra xem results có phải là None hay không
-                for result in results:
-                    st.write(f'=>{result}\n')     
-            elif results == None:
-                st.write("Sorry, I don't recognize any aspect of smartphone in your review")   
-        elif 'user_input' in st.session_state and st.session_state.user_input == '':
-            st.warning('Please ensure to fill some text before hitting enter.')  # Cảnh báo nếu không nhập gì
+    # Display results when user inputs text
+    if user_input:
+        results = show_predict_text(user_input)
+        if results:
+            for result in results:
+                st.write(f'=> {result}')
+        else:
+            st.write("Sorry, I don't recognize any aspect of smartphone in your review")
+    st.warning('Please ensure to fill some text before hitting enter.')  # Warning if no text is entered
     st.title("Upload your data here")
     file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
     if file:
         df = pd.read_csv(file, index_col=None)
         df.to_csv('data_user/source.csv', index=None)
+        st.dataframe(df,use_container_width=True)
+        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
+        st.session_state.file_uploaded = True
+    elif st.button("Press here to download and try our file demo!"):
+        df = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
         st.dataframe(df,use_container_width=True)
         st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
         st.session_state.file_uploaded = True
