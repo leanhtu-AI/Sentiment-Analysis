@@ -34,7 +34,7 @@ def create_model(pretrained_bert):
     # Combine hidden states
     pooled_output = concatenate(
         tuple([hidden_states[i] for i in range(-3, 0)]),
-        name = 'last_4_hidden_states',
+        name = 'last_3_hidden_states',
         axis = -1
     )[:, 0, :]
     x = Dropout(DROP_OUT)(pooled_output)
