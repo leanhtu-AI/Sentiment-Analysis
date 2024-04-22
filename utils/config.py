@@ -13,9 +13,9 @@ MODEL_PATH = 'model'
 # TEST_PATH = "./data/Test.csv"
 
 # Without OTHERS
-TRAIN_PATH = "./data/Train.csv"
-VAL_PATH = "./data/Val.csv"
-TEST_PATH = "./data/Test.csv"
+TRAIN_PATH = "./data/train.csv"
+VAL_PATH = "./data/val.csv"
+TEST_PATH = "./data/test.csv"
 
 # # # For testing traning with small data when you don't have gpu or training on cloud
 # TRAIN_PATH = "./data/train_small.csv"
