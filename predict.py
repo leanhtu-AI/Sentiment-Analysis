@@ -12,23 +12,24 @@ import pandas as pd
 import urllib.request
 import os
 import streamlit as st
+from utils.config import MAX_SEQUENCE_LENGTH
 
 # web services
-@st.cache_resource
-def load_model():
-    if not os.path.isfile('model.h5'):
-        urllib.request.urlretrieve('https://github.com/NguyenHuyHoangCome/steamlit/raw/main/model/best4_16_4_4.h5','model.h5')
-        pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-        reloaded_model = create_model(pretrained_bert)
-        reloaded_model.load_weights('model.h5')
-        return reloaded_model
+# @st.cache_resource
+# def load_model():
+#     if not os.path.isfile('model.h5'):
+#         urllib.request.urlretrieve('https://github.com/NguyenHuyHoangCome/steamlit/raw/main/model/best4_16_4_4.h5','model.h5')
+#         pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+#         reloaded_model = create_model(pretrained_bert)
+#         reloaded_model.load_weights('model.h5')
+#         return reloaded_model
 
-reloaded_model = load_model()
+# reloaded_model = load_model()
 
-# # local
-# pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-# reloaded_model = create_model(pretrained_bert)
-# reloaded_model.load_weights('model/best.h5')
+# local
+pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+reloaded_model = create_model(pretrained_bert)
+reloaded_model.load_weights('model/best.h5')
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
@@ -48,7 +49,7 @@ def predict_text(model, inputs, batch_size=1, verbose=0):
 
 def show_predict_text(text):
     text = preprocess(text)
-    tokenized_input = tokenizer(text, padding='max_length', truncation=True)
+    tokenized_input = tokenizer(text, max_length=256,padding='max_length', truncation=True)
     features = {x: [[tokenized_input[x]]] for x in tokenizer.model_input_names}
     print(features)
     pred, confidences = predict_text(reloaded_model, Dataset.from_tensor_slices(features))
@@ -79,7 +80,7 @@ def show_predict_text(text):
 
 def predict_csv(model, df):
     input_sentences = df.iloc[:, 0].tolist()
-    tokenized_inputs = tokenizer(input_sentences, padding='max_length', truncation=True)
+    tokenized_inputs = tokenizer(input_sentences,max_length=256, padding='max_length', truncation=True)
     features = {x: [tokenized_inputs[x]] for x in tokenizer.model_input_names}
     pred, confidences = predict_text(model, Dataset.from_tensor_slices(features))
     return pred, confidences
