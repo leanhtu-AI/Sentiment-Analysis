@@ -2,7 +2,7 @@ MAX_SEQUENCE_LENGTH = 256
 
 BATCH_SIZE = 20
 
-# you shoud set batch = 20 if you have gpu or training on cloud by colab, kaggle, etc.
+# you shoud set batch = 20 if you have gpu or training on cloud by colab, kaggle, etc. else batch = 5
 
 EPOCHS = 5
 
