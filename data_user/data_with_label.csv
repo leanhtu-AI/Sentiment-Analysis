@@ -1,75 +1,75 @@
 content,label
 bhhsj,
-"Hàng full mới, đẹp tốt","['GENERAL,positive,0.57,4', 'DESIGN,positive,0.99,5']"
-"Hàng dùng được, tốc độ xử lý hơi chậm.","['PERFORMANCE,negative,0.97,1']"
-"Shop giao hành nhanh, hàng chính hãng, okla","['SERACC,positive,0.99,5']"
-"giao hàng nhanh, hàng mới ok luôn","['GENERAL,positive,0.96,5', 'SERACC,positive,0.90,5']"
-"giao hàng nhanh, 5 sao cho shop","['SERACC,positive,0.96,5']"
-Giao hàng nhanh,
+"Hàng full mới, đẹp tốt","['DESIGN,positive,1.00,5']"
+"Hàng dùng được, tốc độ xử lý hơi chậm.","['GENERAL,neutral,0.46,3', 'PERFORMANCE,negative,0.57,2']"
+"Shop giao hành nhanh, hàng chính hãng, okla","['SERACC,positive,0.98,5']"
+"giao hàng nhanh, hàng mới ok luôn","['SERACC,positive,1.00,5']"
+"giao hàng nhanh, 5 sao cho shop","['SERACC,positive,1.00,5']"
+Giao hàng nhanh,"['SERACC,positive,0.99,5']"
 "Giao hàng nhanh hơn dự kiến 2 ngày. Nhận hàng hôm 9/3, hàng nguyên đai nguyên kiện chưa bóc tem. Kiểm tra hôm 9/3 vẫn chưa kích hoạt bảo hành tý nào. 10/3 check lại đã kích hoạt bảo hành. 
 SamSung dòng M32 mới ra gần đây nên công nghệ màn hình rất tốt, nhìn rất đẹp. Màn hình rất sáng mặc dù chỉ để độ sáng trung bình. So với còn Xiaomi Note4 mình mua trc đây đúng là 1 trời 1 vực. Tốc độ đáp ứng của App cũng nhanh hơn hẳn. Cảm biến vân tay cũng nhạy hơn hẳn so với Xiaomi Note4.
-Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.","['SCREEN,positive,0.98,5', 'PERFORMANCE,negative,0.76,1', 'SERACC,negative,0.49,2', 'FEATURES,negative,0.71,1']"
+Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.","['SCREEN,positive,0.70,5', 'SERACC,positive,0.55,4', 'FEATURES,negative,0.43,2']"
 "TÔI ĐANG KHIẾU NẠI VỚI TIKI, TRANG WEB TIKI VÀ SAMSUNG ĐỀU GHI SP NÀY XÀI CỦ SẠC 25W, TRONG KHI SHOP NÀY BÁN 15W(CỦ 15W CHỈ DÙNG CHO DÒNG GALAXY M31, DONG M32 NÀY XÀI CỦ 25W TO HƠN  VÀ MẮC TIỀN HƠN )
 TÔI CẦN 1 LỜI GIẢI THÍCH RÕ RÀNG, YÊU CẦU TRẢ LẠI TIỀN
-MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM","['SERACC,negative,0.92,1', 'PRICE,negative,0.66,1']"
+MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM","['SERACC,negative,0.76,1']"
 "Sản phẩm đã bị sử dụng và cài đặt đầy đủ rồi
 Không phải set up như lần đầu sử dụng
 Đang nhờ Tiki hỗ trợ giải quyết mà chắc không được vì mình tin tưởng uy tin của shop nê n không có quay video lúc mở hàng
 Chỉ rút kinh nghiệm cho bạn nào mua hàng ở shop thì chú ý hơn
 Haizzz
-Giờ ngồi chờ tiki thôi","['PERFORMANCE,negative,0.82,1', 'SERACC,negative,0.81,1']"
-"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.","['GENERAL,positive,0.93,5', 'SERACC,positive,1.00,5']"
-ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,"['GENERAL,positive,0.97,5', 'PERFORMANCE,positive,0.99,5', 'DESIGN,positive,0.99,5']"
-"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.","['SERACC,negative,0.79,1']"
-"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.","['PERFORMANCE,positive,0.98,5', 'SERACC,positive,0.97,5', 'DESIGN,positive,1.00,5']"
-"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.","['GENERAL,positive,1.00,5', 'SERACC,positive,0.86,5', 'BATTERY,positive,1.00,5', 'PRICE,positive,0.85,5']"
-"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!","['GENERAL,positive,0.80,5', 'SERACC,positive,0.99,5']"
-"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác","['GENERAL,positive,0.79,5', 'SERACC,negative,0.55,2', 'FEATURES,positive,0.59,4']"
+Giờ ngồi chờ tiki thôi",
+"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.","['GENERAL,positive,0.96,5', 'SERACC,positive,1.00,5']"
+ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,"['GENERAL,positive,0.99,5', 'PERFORMANCE,positive,0.99,5', 'PRICE,positive,0.76,5', 'DESIGN,positive,0.99,5']"
+"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.","['SERACC,negative,0.53,2']"
+"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.","['PERFORMANCE,positive,1.00,5', 'SERACC,positive,0.95,5', 'DESIGN,positive,0.88,5']"
+"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.","['GENERAL,positive,1.00,5', 'SERACC,positive,0.99,5', 'BATTERY,positive,0.98,5', 'PRICE,neutral,0.92,3']"
+"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!","['GENERAL,positive,0.78,5', 'SERACC,positive,0.98,5']"
+"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác","['SERACC,negative,0.77,1', 'FEATURES,negative,0.50,2']"
 "Giao hàng nhanh hơn dự kiến 2 ngày. Nhận hàng hôm 9/3, hàng nguyên đai nguyên kiện chưa bóc tem. Kiểm tra hôm 9/3 vẫn chưa kích hoạt bảo hành tý nào. 10/3 check lại đã kích hoạt bảo hành. 
 SamSung dòng M32 mới ra gần đây nên công nghệ màn hình rất tốt, nhìn rất đẹp. Màn hình rất sáng mặc dù chỉ để độ sáng trung bình. So với còn Xiaomi Note4 mình mua trc đây đúng là 1 trời 1 vực. Tốc độ đáp ứng của App cũng nhanh hơn hẳn. Cảm biến vân tay cũng nhạy hơn hẳn so với Xiaomi Note4.
-Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.","['SCREEN,positive,0.98,5', 'PERFORMANCE,negative,0.76,1', 'SERACC,negative,0.49,2', 'FEATURES,negative,0.71,1']"
+Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.","['SCREEN,positive,0.70,5', 'SERACC,positive,0.55,4', 'FEATURES,negative,0.43,2']"
 "TÔI ĐANG KHIẾU NẠI VỚI TIKI, TRANG WEB TIKI VÀ SAMSUNG ĐỀU GHI SP NÀY XÀI CỦ SẠC 25W, TRONG KHI SHOP NÀY BÁN 15W(CỦ 15W CHỈ DÙNG CHO DÒNG GALAXY M31, DONG M32 NÀY XÀI CỦ 25W TO HƠN  VÀ MẮC TIỀN HƠN )
 TÔI CẦN 1 LỜI GIẢI THÍCH RÕ RÀNG, YÊU CẦU TRẢ LẠI TIỀN
-MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM","['SERACC,negative,0.92,1', 'PRICE,negative,0.66,1']"
+MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM","['SERACC,negative,0.76,1']"
 "Sản phẩm đã bị sử dụng và cài đặt đầy đủ rồi
 Không phải set up như lần đầu sử dụng
 Đang nhờ Tiki hỗ trợ giải quyết mà chắc không được vì mình tin tưởng uy tin của shop nê n không có quay video lúc mở hàng
 Chỉ rút kinh nghiệm cho bạn nào mua hàng ở shop thì chú ý hơn
 Haizzz
-Giờ ngồi chờ tiki thôi","['PERFORMANCE,negative,0.82,1', 'SERACC,negative,0.81,1']"
-"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.","['GENERAL,positive,0.93,5', 'SERACC,positive,1.00,5']"
-ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,"['GENERAL,positive,0.97,5', 'PERFORMANCE,positive,0.99,5', 'DESIGN,positive,0.99,5']"
-"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.","['SERACC,negative,0.79,1']"
-"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.","['PERFORMANCE,positive,0.98,5', 'SERACC,positive,0.97,5', 'DESIGN,positive,1.00,5']"
-"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.","['GENERAL,positive,1.00,5', 'SERACC,positive,0.86,5', 'BATTERY,positive,1.00,5', 'PRICE,positive,0.85,5']"
-"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!","['GENERAL,positive,0.80,5', 'SERACC,positive,0.99,5']"
-"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác","['GENERAL,positive,0.79,5', 'SERACC,negative,0.55,2', 'FEATURES,positive,0.59,4']"
-"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.","['SCREEN,negative,0.64,1', 'GENERAL,positive,0.53,4', 'PERFORMANCE,negative,0.93,1', 'BATTERY,negative,0.91,1', 'PRICE,neutral,0.86,3', 'DESIGN,positive,0.92,5']"
+Giờ ngồi chờ tiki thôi",
+"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.","['GENERAL,positive,0.96,5', 'SERACC,positive,1.00,5']"
+ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,"['GENERAL,positive,0.99,5', 'PERFORMANCE,positive,0.99,5', 'PRICE,positive,0.76,5', 'DESIGN,positive,0.99,5']"
+"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.","['SERACC,negative,0.53,2']"
+"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.","['PERFORMANCE,positive,1.00,5', 'SERACC,positive,0.95,5', 'DESIGN,positive,0.88,5']"
+"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.","['GENERAL,positive,1.00,5', 'SERACC,positive,0.99,5', 'BATTERY,positive,0.98,5', 'PRICE,neutral,0.92,3']"
+"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!","['GENERAL,positive,0.78,5', 'SERACC,positive,0.98,5']"
+"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác","['SERACC,negative,0.77,1', 'FEATURES,negative,0.50,2']"
+"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.","['SCREEN,negative,0.64,1', 'GENERAL,positive,0.79,5', 'PERFORMANCE,negative,0.66,1', 'SERACC,positive,0.52,4', 'BATTERY,negative,0.94,1', 'PRICE,neutral,1.00,3', 'DESIGN,positive,0.50,4']"
 "* Sản phẩm rất xinh đẹp tuyệt vời, tôi không thể trông đợi gì hơn. Cảm ơn nhà cung cấp, nhà sản xuất, cảm ơn người bán hàng, cảm ơn sàn thương mại điện tử, cảm ơn người vận chuyển để tôi có cơ hội dùng sản phẩm tốt như thế này.
 
 * Hàng đóng gói rất đẹp. Quả nhiên người bán đã gửi gắm rất nhiều tâm tư và tình cảm trong lúc gói hàng. Hộp không có dấu hiệu bị móp, chứng tỏ bộ phận vận chuyển đã nâng như nâng trứng, hứng như hứng hoa. Xin nghiêng mình cảm ơn vì tất cả.
 
-* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.","['SERACC,positive,1.00,5', 'DESIGN,positive,1.00,5']"
+* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.","['SERACC,positive,0.98,5', 'DESIGN,positive,0.99,5']"
 "Hàng chuẩn mới nguyên seal, đã kích hoạt bảo hành trước khoảng 10 ngày. Máy gọn nhẹ, màn không quá nét, chậm nhưng đủ dùng lướt web, xem phim, pin không quá trâu, nhìn chung ngon trong tầm giá!!!
-Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.","['SCREEN,negative,0.40,2', 'GENERAL,positive,0.96,5', 'SERACC,positive,0.96,5', 'BATTERY,positive,0.39,4', 'PRICE,neutral,0.98,3', 'DESIGN,positive,0.95,5']"
-"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)","['SERACC,negative,0.96,1', 'PRICE,negative,0.94,1']"
+Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.","['SCREEN,positive,0.60,5', 'GENERAL,positive,0.99,5', 'SERACC,positive,0.97,5', 'BATTERY,neutral,0.73,3', 'PRICE,neutral,1.00,3', 'DESIGN,positive,0.80,5']"
+"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)","['SERACC,negative,0.95,1', 'PRICE,negative,0.70,1']"
 "Giao hàng nhanh, sp nguyên seal cảm giác được bóc tem rất đã kkk.
 
-Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.","['GENERAL,positive,0.49,4', 'PERFORMANCE,neutral,0.64,3', 'SERACC,positive,0.90,5', 'PRICE,positive,0.81,5']"
-"Bề ngoài thiết kế bằng kim loại nhìn sang trọng, máy cấu hình ok khi sử dụng  cơ bản xem youtube và đọc báo ko nên tập trung vào game dễ gây nóng máy","['PERFORMANCE,positive,0.96,5', 'DESIGN,positive,0.99,5']"
-"SP đang gặp chút lỗi: tác vụ chậm, hay thoát ra khi đang chạy ứng dụng. Đang ko biết có nên bảo hành không. Thân máy đẹp, pin khỏe, màu sắc đẹp. Bị 2 lỗi kia nên xử lý sao Shop??","['PERFORMANCE,negative,0.93,1', 'BATTERY,positive,0.93,5', 'DESIGN,positive,0.99,5']"
-"sản phẩm ban đầu nhìn khá là ok, đóng gói cẩn thận! giao hàng nhanh 2 ngày đã nhận đc hàng!!!!?!! .....đg bắt đầu trải nghiệm, chắc ổn!","['GENERAL,positive,1.00,5', 'SERACC,positive,0.95,5']"
-"mình nhận máy rồi, *** thử chạy thấy mượt nhưng tiếc là không có tặng kèm bao da","['PERFORMANCE,positive,0.96,5', 'SERACC,negative,0.77,1']"
-"tiki giao hàng nhanh, đóng gói rats kỹ, nhân viên giao hàng nhiệt tình chu đáo, máy đẹp cong nguyên siêu, mua tăng cháu nên chưa đánh giá máy. Noi chung rất hài lòng.","['GENERAL,positive,0.99,5', 'SERACC,positive,1.00,5', 'DESIGN,positive,1.00,5']"
-"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.","['SCREEN,negative,0.64,1', 'GENERAL,positive,0.53,4', 'PERFORMANCE,negative,0.93,1', 'BATTERY,negative,0.91,1', 'PRICE,neutral,0.86,3', 'DESIGN,positive,0.92,5']"
+Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.","['GENERAL,positive,0.72,5', 'PERFORMANCE,positive,0.84,5', 'SERACC,positive,0.99,5', 'PRICE,neutral,0.73,3']"
+"Bề ngoài thiết kế bằng kim loại nhìn sang trọng, máy cấu hình ok khi sử dụng  cơ bản xem youtube và đọc báo ko nên tập trung vào game dễ gây nóng máy","['PERFORMANCE,positive,0.87,5', 'DESIGN,positive,0.90,5']"
+"SP đang gặp chút lỗi: tác vụ chậm, hay thoát ra khi đang chạy ứng dụng. Đang ko biết có nên bảo hành không. Thân máy đẹp, pin khỏe, màu sắc đẹp. Bị 2 lỗi kia nên xử lý sao Shop??","['PERFORMANCE,negative,0.81,1', 'BATTERY,positive,0.60,5', 'DESIGN,positive,0.94,5']"
+"sản phẩm ban đầu nhìn khá là ok, đóng gói cẩn thận! giao hàng nhanh 2 ngày đã nhận đc hàng!!!!?!! .....đg bắt đầu trải nghiệm, chắc ổn!","['GENERAL,positive,0.98,5', 'SERACC,positive,0.92,5']"
+"mình nhận máy rồi, *** thử chạy thấy mượt nhưng tiếc là không có tặng kèm bao da","['PERFORMANCE,positive,0.98,5', 'SERACC,negative,0.90,1']"
+"tiki giao hàng nhanh, đóng gói rats kỹ, nhân viên giao hàng nhiệt tình chu đáo, máy đẹp cong nguyên siêu, mua tăng cháu nên chưa đánh giá máy. Noi chung rất hài lòng.","['GENERAL,positive,0.96,5', 'SERACC,positive,0.99,5', 'DESIGN,positive,0.99,5']"
+"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.","['SCREEN,negative,0.64,1', 'GENERAL,positive,0.79,5', 'PERFORMANCE,negative,0.66,1', 'SERACC,positive,0.52,4', 'BATTERY,negative,0.94,1', 'PRICE,neutral,1.00,3', 'DESIGN,positive,0.50,4']"
 "* Sản phẩm rất xinh đẹp tuyệt vời, tôi không thể trông đợi gì hơn. Cảm ơn nhà cung cấp, nhà sản xuất, cảm ơn người bán hàng, cảm ơn sàn thương mại điện tử, cảm ơn người vận chuyển để tôi có cơ hội dùng sản phẩm tốt như thế này.
 
 * Hàng đóng gói rất đẹp. Quả nhiên người bán đã gửi gắm rất nhiều tâm tư và tình cảm trong lúc gói hàng. Hộp không có dấu hiệu bị móp, chứng tỏ bộ phận vận chuyển đã nâng như nâng trứng, hứng như hứng hoa. Xin nghiêng mình cảm ơn vì tất cả.
 
-* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.","['SERACC,positive,1.00,5', 'DESIGN,positive,1.00,5']"
+* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.","['SERACC,positive,0.98,5', 'DESIGN,positive,0.99,5']"
 "Hàng chuẩn mới nguyên seal, đã kích hoạt bảo hành trước khoảng 10 ngày. Máy gọn nhẹ, màn không quá nét, chậm nhưng đủ dùng lướt web, xem phim, pin không quá trâu, nhìn chung ngon trong tầm giá!!!
-Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.","['SCREEN,negative,0.40,2', 'GENERAL,positive,0.96,5', 'SERACC,positive,0.96,5', 'BATTERY,positive,0.39,4', 'PRICE,neutral,0.98,3', 'DESIGN,positive,0.95,5']"
-"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)","['SERACC,negative,0.96,1', 'PRICE,negative,0.94,1']"
+Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.","['SCREEN,positive,0.60,5', 'GENERAL,positive,0.99,5', 'SERACC,positive,0.97,5', 'BATTERY,neutral,0.73,3', 'PRICE,neutral,1.00,3', 'DESIGN,positive,0.80,5']"
+"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)","['SERACC,negative,0.95,1', 'PRICE,negative,0.70,1']"
 "Giao hàng nhanh, sp nguyên seal cảm giác được bóc tem rất đã kkk.
 
-Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.","['GENERAL,positive,0.49,4', 'PERFORMANCE,neutral,0.64,3', 'SERACC,positive,0.90,5', 'PRICE,positive,0.81,5']"
+Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.","['GENERAL,positive,0.72,5', 'PERFORMANCE,positive,0.84,5', 'SERACC,positive,0.99,5', 'PRICE,neutral,0.73,3']"

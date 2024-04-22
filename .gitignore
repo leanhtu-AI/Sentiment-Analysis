@@ -1,3 +1,4 @@
 __pycache__
 .gitattributes
 model
+model.h5
