@@ -50,6 +50,7 @@ def show_predict_text(text):
     text = preprocess(text)
     tokenized_input = tokenizer(text, padding='max_length', truncation=True)
     features = {x: [[tokenized_input[x]]] for x in tokenizer.model_input_names}
+    print(features)
     pred, confidences = predict_text(reloaded_model, Dataset.from_tensor_slices(features))
     results = []
     for i in range(len(pred)):
@@ -73,6 +74,7 @@ def show_predict_text(text):
             results.append(absa_pred)
         else:
             results.append(absa_pred)
+    print(results)
     return results
 
 def predict_csv(model, df):
