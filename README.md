@@ -59,7 +59,7 @@
  - With our model, we fine tune by use slow learning rate (1e-4) and small weight decay (5e-3) of AdamW because of more aspect and data. In the 3 last pooling layers, it performance look quite better than anything.
 
 ### 🌊Results
- - You can visit our report for more information about the data, preprocessing and experiment setup.
+ - You can visit our [report](https://www.canva.com/design/DAFolBANnZY/PqK7A3Vz9oXna2irnKNVdg/edit?utm_content=DAFolBANnZY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) for more information about the data, preprocessing and experiment setup.
  - Best result:
 
 Tasks | Precision | Recall  | F1-Score  
@@ -72,6 +72,8 @@ Aspect + Polarity | 78.39 | 68.00 | 68.41 |
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Pip](https://pip.pypa.io/en/stable/installation/) installed on your computer. From your command line:
 
+### For training models
+
 ```bash
 # Clone this repository
 $ git clone https://github.com/leanhtu-AI/Sentiment-Analysis.git
@@ -82,16 +84,23 @@ $ cd Sentiment-Analysis
 # Install dependencies
 $ pip install requirements.txt
 
-# For running the app
-$ streamlit run app.py
-
-# For training the model
 $ python train.py
 
 ```
 
+> [!TIP]
+> I have setup for training models with gpu already, if you don't have gpu and still want training or fine tuning by yourself, you should go to this [notebook](https://colab.research.google.com/drive/1qPOqBUZ4igO62dJbiBLqs9vITMtl2AKX?usp=sharing)
+
+### For running web (local)
+```bash
+$ streamlit run app.py
+```
+> [!TIP]
+> When you running the first time, it will download the model weights(.h5) to your local filesystem. For faster running next time, you should create a folder named 'model' and move the h5 file to that. Then go to predict.py comment the downloaded model weights on cloud and uncomment the load weights local.
+
+
 > [!NOTE]  
-> We use the Windows command, if you are running on MacOS or Linux, it can be different a bit.
+> We use the Windows command, if you are running on MacOS or Linux, you might to modify because it can be different a bit.
 
 ## 👉Credits
 This repo uses the following open source packages:
@@ -99,11 +108,7 @@ This repo uses the following open source packages:
 - [Streamlit](https://streamlit.io/)
 - [Transformers](https://github.com/huggingface/transformers)
 - [Underthesea](https://github.com/undertheseanlp/underthesea)
-- [nltk](https://github.com/nltk/nltk)
-- [Regex](https://github.com/ziishaned/learn-regex)
-- [Numpy](https://numpy.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Matplotlib](https://matplotlib.org/stable/)
+- Others: [nltk](https://github.com/nltk/nltk), [Regex](https://github.com/ziishaned/learn-regex), [Numpy](https://numpy.org/),[Pandas](https://pandas.pydata.org/), [Matplotlib](https://matplotlib.org/stable/), [Seaborn](https://seaborn.pydata.org/index.html),etc.
 
 
 ## 📢Related
