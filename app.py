@@ -103,6 +103,7 @@ elif choice == 'Upload':
         st.session_state.file_uploaded = True
     elif st.button("Press here to download and try our file demo!"):
         df = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df.to_csv('data_user/source.csv', index=None)
         st.dataframe(df,use_container_width=True)
         st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
         st.session_state.file_uploaded = True

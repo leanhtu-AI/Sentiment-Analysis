@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">A model and web app service in <a href="https://monkeylearn.com/blog/what-is-aspect-based-sentiment-analysis/" target="_blank">ABSA</a> abot smartphone review.</h4>
+<h4 align="center">A model and web app service in <a href="https://monkeylearn.com/blog/what-is-aspect-based-sentiment-analysis/" target="_blank">ABSA</a> about smartphone review.</h4>
 
 <p align="center">
   <a href="https://jvb-corp.com/vi"><img src="https://img.shields.io/badge/jvb--corp-vi-black?color=red"></a>
@@ -26,7 +26,8 @@
 </p>
 
 <p align="center">
-  <a href="#about-web">About Web</a> •
+  <a href="#about-web">Data</a> •
+  <a href="#about-web">About Web</a> 
   <a href="#about-model">About Model</a> •
   <a href="#credits">Credits</a> •
   <a href="#related">Related</a> •
@@ -36,6 +37,10 @@
 <p align="center">
   <img src="lottiefiles/example.gif" alt="Alt Text">
 <p>
+
+## 📁Data
+* We using the data collected by [Luong Luc Phan et al., 2021](https://github.com/LuongPhan/UIT-ViSFD), you can read more about the data when read their paper on this [repo](https://github.com/LuongPhan/UIT-ViSFD).
+* Or visti the paper published on [SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-82147-0_53?fbclid=IwAR00G3h4feqS5m_hu8lMbwLw22bXqOjBLrpBzs25eszMN9d7UPjjaCTEcpw)
 
 ## 🤗About Web
 
@@ -56,11 +61,12 @@
 ### 🌊Results
  - You can visit our report for more information about the data, preprocessing and experiment setup.
  - Best result:
-Tasks | Precision | Recall | F1-Score | Accuracy 
- --- | --- | --- | --- 
-Aspect Detection | | | 
-Polarity Detection | | |
-Aspect + Polarity | | | 
+
+Tasks | Precision | Recall  | F1-Score  
+---|---|---|---
+Aspect Detection | 90.21 | 0.87 | 0.88 |
+Polarity Detection | 80.59 | 77.86 | 78.66 |
+Aspect + Polarity | 78.39 | 68.00 | 68.41 |
 
 ## 🧑‍💻How To Use
 
@@ -99,6 +105,7 @@ This repo uses the following open source packages:
 - [Pandas](https://pandas.pydata.org/)
 - [Matplotlib](https://matplotlib.org/stable/)
 
+
 ## 📢Related
 [Junior-VB-web]() - Web version link of our model.
 
@@ -108,3 +115,4 @@ This repo uses the following open source packages:
 ## 📝License
 
 MIT
+
