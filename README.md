@@ -26,9 +26,9 @@
 </p>
 
 <p align="center">
-  <a href="#about-web">Data</a> •
-  <a href="#about-web">About Web</a> 
-  <a href="#about-model">About Model</a> •
+  <a href="#data">Data</a> •
+  <a href="#model">Model</a> •  
+  <a href="#web">Web</a> •
   <a href="#credits">Credits</a> •
   <a href="#related">Related</a> •
   <a href="#license">License</a>
@@ -42,17 +42,7 @@
 * We using the data collected by [Luong Luc Phan et al., 2021](https://github.com/LuongPhan/UIT-ViSFD), you can read more about the data when read their paper on this [repo](https://github.com/LuongPhan/UIT-ViSFD).
 * Or visti the paper published on [SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-82147-0_53?fbclid=IwAR00G3h4feqS5m_hu8lMbwLw22bXqOjBLrpBzs25eszMN9d7UPjjaCTEcpw).
 
-## 🤗About Web
-
-* 📝Predict random text from keyboard
-  - You can try our service by enter some review about phone before uploading file.
-  - By this, you can understand clearly our result.
-* 🗂️Upload file
-  - The limit space of streamlit is 200MB. We sorry about that.
-  - From now, our model accepts 3 type of file: csv, json and excel.
-  - The processing for file input may take time depending on size of file.
-
-## 📈About Model
+## 📈Model
 ### 🤝Pre-trained Model And Fine-tuning
  - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for our problem and were inspired of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
  - You can read more details in this [paper](https://github.com/ds4v/absa-vlsp-2018/blob/main/Paper.pdf).
@@ -67,6 +57,16 @@ Tasks | Precision | Recall  | F1-Score
 Aspect Detection | 90.21 | 87.56 | 88.56 |
 Polarity Detection | 80.59 | 77.86 | 78.66 |
 Aspect + Polarity | 78.39 | 68.00 | 68.41 |
+
+## 🤗Web
+
+* 📝Predict random text from keyboard
+  - You can try our service by enter some review about phone before uploading file.
+  - By this, you can understand clearly our result.
+* 🗂️Upload file
+  - The limit space of streamlit is 200MB. We sorry about that.
+  - From now, our model accepts 3 type of file: csv, json and excel.
+  - The processing for file input may take time depending on size of file.
 
 ## 🧑‍💻How To Use
 
