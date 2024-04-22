@@ -40,7 +40,7 @@
 
 ## 📁Data
 * We using the data collected by [Luong Luc Phan et al., 2021](https://github.com/LuongPhan/UIT-ViSFD), you can read more about the data when read their paper on this [repo](https://github.com/LuongPhan/UIT-ViSFD).
-* Or visti the paper published on [SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-82147-0_53?fbclid=IwAR00G3h4feqS5m_hu8lMbwLw22bXqOjBLrpBzs25eszMN9d7UPjjaCTEcpw)
+* Or visti the paper published on [SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-82147-0_53?fbclid=IwAR00G3h4feqS5m_hu8lMbwLw22bXqOjBLrpBzs25eszMN9d7UPjjaCTEcpw).
 
 ## 🤗About Web
 
@@ -64,7 +64,7 @@
 
 Tasks | Precision | Recall  | F1-Score  
 ---|---|---|---
-Aspect Detection | 90.21 | 0.87 | 0.88 |
+Aspect Detection | 90.21 | 0.87 | 88.56 |
 Polarity Detection | 80.59 | 77.86 | 78.66 |
 Aspect + Polarity | 78.39 | 68.00 | 68.41 |
 
