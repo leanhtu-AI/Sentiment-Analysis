@@ -14,8 +14,11 @@
   <a href="https://img.shields.io/badge/release-1.0.0-black?color=%23c6e2ff">
       <img src="https://img.shields.io/badge/release-1.0.0-black?color=%23c6e2ff">
   </a>
-  <a href="https://www.facebook.com/lnht1808.secsip">
-    <img src="https://img.shields.io/badge/Facebook-green?style=flat&logo=facebook&color=24A3BB">
+  <a href="https://img.shields.io/badge/Python-1.11-black?logo=python&logoColor=yellow&color=blue">
+    <img src="https://img.shields.io/badge/Python-1.11-black?logo=python&logoColor=yellow&color=blue">
+  </a>
+  <a href="https://img.shields.io/badge/Streamlit-1.33-black?logo=Streamlit&color=red">
+    <img src="https://img.shields.io/badge/Streamlit-1.33-black?logo=Streamlit&color=red">
   </a>
   <a href="https://mail.google.com/mail/u/3/#inbox">
     <img src="https://img.shields.io/badge/contact-gmail-black?logo=gmail&color=%23fe935e">
