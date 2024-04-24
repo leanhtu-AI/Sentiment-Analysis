@@ -146,7 +146,7 @@ def process_cell(cell):
 
 def show_predict_csv():
     # Load the data
-    df = pd.read_csv("C:/Users/FPTSHOP/OneDrive/Documents/SAV/data_user/data_with_label.csv")
+    df = pd.read_csv("data_user/data_with_label.csv")
     df = df.dropna()
 
     # Apply the process_cell function to each cell in the 'label' column and create new DataFrame columns
