@@ -13,7 +13,7 @@ from predict import show_predict_text,process_predict_csv, show_predict_csv
 import matplotlib.pyplot as plt
 import seaborn as sns
 from annotated_text import annotated_text
-
+import time
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
@@ -25,7 +25,7 @@ def load_lottiefile(filepath: str):
         return json.load(f)
     
 def plot_aspect_frequency(aspect_df):
-  ## Tạo biểu đồ cột
+    ## Tạo biểu đồ cột
     fig, ax = plt.subplots(figsize=(10, 6))
     bars = ax.bar(aspect_df['Aspect'], aspect_df['Frequency'], color='skyblue')
     
@@ -35,11 +35,20 @@ def plot_aspect_frequency(aspect_df):
     ax.set_ylabel('Frequency')
     
     # Xoay nhãn trục x
-    ax.tick_params(axis='x', rotation=45)
+    plt.xticks(rotation=45)
     
     # Thay đổi màu của các thanh cột
     for bar in bars:
         bar.set_color('skyblue')
+    
+    # Hiển thị giá trị trên mỗi cột
+    for bar in bars:
+        height = bar.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(bar.get_x() + bar.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
     
     # Hiển thị biểu đồ
     st.pyplot(fig)
@@ -53,8 +62,8 @@ def plot_sentiment_frequencies(sentiment_df):
     ax.pie(sentiment_df['frequency'], labels=sentiment_df['sentiments'], autopct='%1.1f%%', startangle=90)
     ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
     # Add legend
-    ax.legend(sentiment_df['sentiments'], loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
-
+    ax.set_title('Percentage of Sentiments')
+    ax.legend(sentiment_df['sentiments'], loc="upper left", bbox_to_anchor=(1, 0, 0.5, 1))
     # Display pie chart using Streamlit
     st.pyplot(fig)
 
@@ -73,7 +82,7 @@ if choice == 'Home':
     st.title("こんにちは! Welcome to our ABSA web app😊")
     st_lottie(lottie_robot, speed=1, loop=True, quality="low")
     # snowfall
-    if st.button("きれいなゆき・Bông tuyết trong sạch🤡"):
+    if st.button("❄️降雪❄️"):
         st.snow()
 
 elif choice == 'Upload':
@@ -97,33 +106,56 @@ elif choice == 'Upload':
     file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
     if file:
         df = pd.read_csv(file, index_col=None)
-        df.to_csv('data_user/source.csv', index=None)
-        st.dataframe(df,use_container_width=True)
-        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
+        df.to_csv("data_user/source.csv", index = False)
+        st.dataframe(df, use_container_width=True)
         st.session_state.file_uploaded = True
-    elif st.button("Press here to download and try our file demo!"):
-        df = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
-        df.to_csv('data_user/source.csv', index=None)
-        st.dataframe(df,use_container_width=True)
-        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉",)
+        st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
+
+    elif not st.session_state.file_uploaded:
+        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo.to_csv("data_user/source.csv", index = False)
+        st.dataframe(df_demo, use_container_width=True)
+        st.success("Demo file⭐")
         st.session_state.file_uploaded = True
+
+    elif st.session_state.file_uploaded and file is None:
+        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo.to_csv("data_user/source.csv", index = False)
+        st.dataframe(df_demo, use_container_width=True)
+        st.success("Demo file⭐")
+        st.session_state.file_uploaded = True
+
+    else:
+        st.info("Demo data is hidden because you uploaded your own data.")
+# Nếu người dùng đã tải lên một tệp, ẩn dữ liệu mẫu
+
 if choice in ['Apply ABSA']:
     if not st.session_state.file_uploaded:
         st.warning("Please upload a file first before proceeding to this step.")
-    else:               
+    else:   
         lottie_data_to_ai = load_lottiefile("lottiefiles/data_to_ai.json")
-        st_lottie(lottie_data_to_ai, speed=1, loop=True, quality="low")    
+        st_lottie(lottie_data_to_ai, speed=1, loop=True, quality="low")  
+        progress_bar = st.progress(0) 
+                     
+        progress_bar.progress(25)
+        time.sleep(2)
         input_path = "data_user/source.csv"
         output_path = "data_user/raw.csv"
         auto_detect_filter_data(input_path, output_path)
         df_detect = pd.read_csv(output_path, index_col=None)
+        
+        progress_bar.progress(50)
+        time.sleep(1)
         df_clean = preprocess_data(df_detect)
         output_csv_path = "data_user/data_with_label.csv"  # Specify output CSV file path
+        
+        progress_bar.progress(75)
         process_predict_csv(df_clean, output_csv_path)
+        st.session_state.absa_applied = True  # Set flag to True indicating ABSA has been applied
+        progress_bar.progress(100)
+            
         show = show_predict_csv()
         st.dataframe(show)
-
-        st.session_state.absa_applied = True  # Set flag to True indicating ABSA has been applied
         
 elif choice == "More information":
     if not st.session_state.absa_applied:
@@ -154,11 +186,17 @@ elif choice == "More information":
         st.markdown(html_str, unsafe_allow_html=True)        
         plot_aspect_frequency(aspect_df)
         st.divider()
-        st.markdown("<p color: black;'>Percentage of sentimens</p>", unsafe_allow_html=True)
         sentiment_df = sentiments_frequency(df)
+        total_sentiment = sentiment_df.iloc[:, 1].sum()  # Access the values of the second column and calculate their sum
+        html_str = f"<p style='color: black;'>👽We have calculated total "
+        html_str += f"{total_sentiment} sentiment: "
+        output = ", ".join([f"{frequency} {sentiment}s" for frequency, sentiment in zip(sentiment_df['frequency'], sentiment_df['sentiments'])])
+        html_str += output
+        html_str += "💗</p>"
+
+        st.markdown(html_str, unsafe_allow_html=True)        
         plot_sentiment_frequencies(sentiment_df)
 
-# Gọi hàm để vẽ biểu đồ
 elif choice == 'About us':
     st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
     url_company = "https://jvb-corp.com/vi/"
