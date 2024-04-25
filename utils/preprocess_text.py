@@ -151,11 +151,5 @@ def preprocess(text, word_tokenize = None):
     text= underthesea.word_tokenize(" ".join(tokens), format="text")
 
     text = remove_unnecessary_characters(text)
-    # return text.lower()
     return text
 
-# Viết những hàm xử lí cho chuẩn hóa tiếng việt  
-# xử lí unicode  
-# Chuẩn hóa câu( xóa các tag html nếu có, xóa emoji, xóa khoảng trắng thừa)  
-# Chuẩn hóa từ (ktra từ tiếng việt, xóa chữ kéo dài, eg: đẹppppp)  
-# Xóa các dấu thừa ( punctuation)
