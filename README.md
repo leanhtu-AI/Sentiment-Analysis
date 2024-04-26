@@ -14,8 +14,11 @@
   <a href="https://img.shields.io/badge/release-1.0.0-black?color=%23c6e2ff">
       <img src="https://img.shields.io/badge/release-1.0.0-black?color=%23c6e2ff">
   </a>
-  <a href="https://www.facebook.com/lnht1808.secsip">
-    <img src="https://img.shields.io/badge/Facebook-green?style=flat&logo=facebook&color=24A3BB">
+  <a href="https://img.shields.io/badge/Python-3.11-black?logo=python&logoColor=yellow&color=blue">
+    <img src="https://img.shields.io/badge/Python-3.11-black?logo=python&logoColor=yellow&color=blue">
+  </a>
+  <a href="https://img.shields.io/badge/Streamlit-1.33-black?logo=Streamlit&color=red">
+    <img src="https://img.shields.io/badge/Streamlit-1.33-black?logo=Streamlit&color=red">
   </a>
   <a href="https://mail.google.com/mail/u/3/#inbox">
     <img src="https://img.shields.io/badge/contact-gmail-black?logo=gmail&color=%23fe935e">
@@ -46,7 +49,7 @@
 ### 🤝Pre-trained Model And Fine-tuning
  - We using [PhoBERT-base](https://huggingface.co/vinai/phobert-base) model, which was created by [VinAI](https://github.com/VinAIResearch) for our problem and were inspired of fine-tuning by [Quan Dang](https://github.com/ds4v/absa-vlsp-2018).
  - You can read more details in this [paper](https://github.com/ds4v/absa-vlsp-2018/blob/main/Paper.pdf).
- - With our model, we fine tune by use slow learning rate (1e-4) and small weight decay (5e-3) of AdamW because of more aspect and data. In the 3 last pooling layers, it performance look quite better than anything.
+ - With our model, we fine tune by use slow learning rate (1e-4) and small weight decay (5e-3) of AdamW. In the 3 last pooling layers, it performance look quite better than anything.
 
 ### 🌊Results
  - You can visit our [report](https://www.canva.com/design/DAFolBANnZY/PqK7A3Vz9oXna2irnKNVdg/edit?utm_content=DAFolBANnZY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) for more information about the data, preprocessing and experiment setup.
@@ -89,7 +92,7 @@ $ python train.py
 ```
 
 > [!TIP]
-> I have setup for training models with gpu already, if you don't have gpu and still want training or fine tuning by yourself, you should go to this [notebook](https://colab.research.google.com/drive/1qPOqBUZ4igO62dJbiBLqs9vITMtl2AKX?usp=sharing)
+> I have setup for training models with gpu already, if you don't have gpu and still want training or fine tuning by yourself, you should go to this [notebook](https://colab.research.google.com/drive/1qPOqBUZ4igO62dJbiBLqs9vITMtl2AKX?usp=sharing) or download weights [here](https://drive.google.com/file/d/1vkXdyzh-nLmba6j4rBt-neQVdSw3Gmci/view?usp=sharing)
 
 ### For running web (local)
 ```bash
