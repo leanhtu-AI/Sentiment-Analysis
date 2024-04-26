@@ -14,21 +14,21 @@ import os
 import streamlit as st
 
 # web services
-# @st.cache_resource
-# def load_model():
-#     if not os.path.isfile('model.h5'):
-#         urllib.request.urlretrieve('https://github.com/NguyenHuyHoangCome/steamlit/raw/main/model/best4_16_4_4.h5','model.h5')
-#         pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-#         reloaded_model = create_model(pretrained_bert)
-#         reloaded_model.load_weights('model.h5')
-#         return reloaded_model
+@st.cache_resource
+def load_model():
+    if not os.path.isfile('model.h5'):
+        urllib.request.urlretrieve('https://github.com/NguyenHuyHoangCome/steamlit/raw/main/model/best4_16_4_4.h5','model.h5')
+        pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+        reloaded_model = create_model(pretrained_bert)
+        reloaded_model.load_weights('model.h5')
+        return reloaded_model
 
-# reloaded_model = load_model()
+reloaded_model = load_model()
 
-# local
-pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-reloaded_model = create_model(pretrained_bert)
-reloaded_model.load_weights('model/best.h5')
+# # local
+# pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+# reloaded_model = create_model(pretrained_bert)
+# reloaded_model.load_weights('model/best.h5')
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test.columns[1:]
