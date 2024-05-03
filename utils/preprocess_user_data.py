@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from utils.preprocess_text import preprocess
+from preprocess_text import preprocess
 import matplotlib.pyplot as plt
 
 def auto_detect_filter_data(input_path, output_path):
