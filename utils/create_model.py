@@ -3,9 +3,10 @@ from keras.layers import Input, Dense, Dropout, concatenate
 from keras.layers import Layer
 from tensorflow.keras.optimizers import AdamW
 from transformers import TFAutoModel
-from utils.variables import STEPS_PER_EPOCH, VALIDATION_STEPS, df_train,val_tf_dataset,train_tf_dataset
-from utils.config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT
-from utils.tokenizer import PRETRAINED_MODEL
+from variables_phone import df_train_phone,val_phone_dataset,train_phone_dataset
+from config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT
+from tokenizer import PRETRAINED_MODEL
+from variables_res import df_train_res, val_res_dataset, train_res_dataset
 
 
 class CustomLayer(Layer):
@@ -21,7 +22,7 @@ class CustomLayer(Layer):
             config = super().get_config()
             return config
 
-def create_model(pretrained_bert):
+def create_model_phone(pretrained_bert):
     inputs = {
         'input_ids'     : Input((MAX_SEQUENCE_LENGTH,), dtype='int32', name='input_ids'),
         'token_type_ids': Input((MAX_SEQUENCE_LENGTH,), dtype='int32', name='token_type_ids'),
@@ -44,7 +45,7 @@ def create_model(pretrained_bert):
             units = 4,
             activation = 'softmax',
             name = label.replace('#', '-').replace('&', '_'),
-        )(x) for label in df_train.columns[1:]
+        )(x) for label in df_train_phone.columns[1:]
     ], axis = -1)
 
     optimizer = AdamW(learning_rate=LEARNING_RATE, weight_decay=WEIGHT_DECAY)  # Set your learning rate and weight decay
@@ -52,4 +53,35 @@ def create_model(pretrained_bert):
     model.compile(optimizer=optimizer, loss='binary_crossentropy')
     return model
 
+
+def create_model_res(pretrained_bert):
+    inputs = {
+        'input_ids'     : Input((MAX_SEQUENCE_LENGTH,), dtype='int32', name='input_ids'),
+        'token_type_ids': Input((MAX_SEQUENCE_LENGTH,), dtype='int32', name='token_type_ids'),
+        'attention_mask': Input((MAX_SEQUENCE_LENGTH,), dtype='int32', name='attention_mask')
+    }
+    # Define a custom layer to handle TensorFlow function call
+    custom_layer = CustomLayer(pretrained_bert)
+    hidden_states = custom_layer(inputs)
+
+    # Combine hidden states
+    pooled_output = concatenate(
+        tuple([hidden_states[i] for i in range(-3, 0)]),
+        name = 'last_3_hidden_states',
+        axis = -1
+    )[:, 0, :]
+    x = Dropout(DROP_OUT)(pooled_output)
+
+    outputs = concatenate([
+        Dense(
+            units = 4,
+            activation = 'softmax',
+            name = label.replace('#', '-').replace('&', '_'),
+        )(x) for label in df_train_res.columns[1:]
+    ], axis = -1)
+
+    optimizer = AdamW(learning_rate=LEARNING_RATE, weight_decay=WEIGHT_DECAY)  # Set your learning rate and weight decay
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(optimizer=optimizer, loss='binary_crossentropy')
+    return model
 
