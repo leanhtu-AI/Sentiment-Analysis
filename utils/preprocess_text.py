@@ -3,7 +3,7 @@ import string
 import demoji
 import underthesea
 from nltk import flatten
-from utils.word_dict import replace_list
+from word_dict import replace_list
 
 # Remove HTML code
 def remove_HTML(text):
@@ -152,4 +152,5 @@ def preprocess(text, word_tokenize = None):
 
     text = remove_unnecessary_characters(text)
     return text
+
 
