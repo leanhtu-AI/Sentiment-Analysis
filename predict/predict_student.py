@@ -1,9 +1,9 @@
 from tensorflow.train import latest_checkpoint
 from tensorflow.keras.models import load_model
-from create_model import create_model_phone
+from create_model import create_model_stu
 from transformers import TFAutoModel
 from utils.tokenizer import PRETRAINED_MODEL
-from utils.variables_phone import df_test_phone, tokenizer
+from utils.variables_student import df_test_stu, tokenizer
 from utils.preprocess_text import preprocess
 import numpy as np
 from tensorflow.data import Dataset
@@ -12,6 +12,7 @@ import pandas as pd
 import urllib.request
 import os
 import streamlit as st
+
 # web services
 # @st.cache_resource
 # def load_model():
@@ -24,12 +25,13 @@ import streamlit as st
 
 # reloaded_model = load_model()
 
+# local -
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-reloaded_model_phone = create_model_phone(pretrained_bert)
-reloaded_model_phone.load_weights('model/phone.h5')
+reloaded_model = create_model_stu(pretrained_bert)
+reloaded_model.load_weights('model/student.h5')
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
-categories = df_test_phone.columns[1:]
+categories = df_test_stu.columns[1:]
 
 def print_acsa_pred(replacements, categories, sentence_pred, confidence_scores):
     sentiments = map(lambda x: replacements[x], sentence_pred)
@@ -48,7 +50,7 @@ def show_predict_text(text):
     text = preprocess(text)
     tokenized_input = tokenizer(text, max_length=256,padding='max_length', truncation=True)
     features = {x: [[tokenized_input[x]]] for x in tokenizer.model_input_names}
-    pred, confidences = predict_text(reloaded_model_phone, Dataset.from_tensor_slices(features))
+    pred, confidences = predict_text(reloaded_model, Dataset.from_tensor_slices(features))
     results = []
     for i in range(len(pred)):
         absa_pred = print_acsa_pred(replacements, categories, pred[i], confidences[i])
@@ -81,7 +83,7 @@ def predict_csv(model, df):
     return pred, confidences
 
 def process_predict_csv(df_clean, output_csv_path):
-    pred, confidences = predict_csv(reloaded_model_phone, df_clean)
+    pred, confidences = predict_csv(reloaded_model, df_clean)
     results = []
     for i in range(len(pred)):
         absa_pred = print_acsa_pred(replacements, categories, pred[i], confidences[i])
