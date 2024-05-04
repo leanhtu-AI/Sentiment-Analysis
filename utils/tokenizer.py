@@ -36,3 +36,11 @@ def tokenize_function(examples):
     tokenized_inputs = tokenizer(clean_texts, max_length=256, truncation=True, padding='max_length', return_tensors="tf")
 
     return tokenized_inputs
+
+
+def tokenize_function_hotel(examples):
+    tokenizer = call_tokenizer()
+    clean_texts = [preprocess(comment) for comment in examples['Review']]
+    tokenized_inputs = tokenizer(clean_texts, max_length=256, truncation=True, padding='max_length', return_tensors="tf")
+
+    return tokenized_inputs
