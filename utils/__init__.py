@@ -6,3 +6,4 @@ from utils import tf_format
 from utils import tokenizer
 from utils import word_dict
 from utils import create_model
+from utils import variables_student
