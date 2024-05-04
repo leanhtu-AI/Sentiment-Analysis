@@ -1,75 +1,101 @@
-id,title,content,thank_count,customer_id,rating,created_at,customer_name,purchased_at
-,Cực kì hài lòng,bhhsj,0,1909738,5,1642322010,Cao Hung,1639487891
-,Cực kì hài lòng,"Hàng full mới, đẹp tốt",0,303085,5,1639489961,Lê Minh Nhật,1639186534
-,Không hài lòng,"Hàng dùng được, tốc độ xử lý hơi chậm.",0,9666690,2,1639139956,truong van thanh,1638796719
-,Cực kì hài lòng,"Shop giao hành nhanh, hàng chính hãng, okla",0,1615342,5,1639570743,PHAN VĂN THẮNG,1638921350
-,Hài lòng,"giao hàng nhanh, hàng mới ok luôn",0,25829517,4,1638853635,Nguyen viết lãm,1638723368
-,Cực kì hài lòng,"giao hàng nhanh, 5 sao cho shop",1,25761045,5,1638866182,Đặng Công Minh,1638358443
-,Cực kì hài lòng,Giao hàng nhanh,0,14914226,5,1644647637,HộpThư TriÂn,1639271806
-,Cực kì hài lòng,"Giao hàng nhanh hơn dự kiến 2 ngày. Nhận hàng hôm 9/3, hàng nguyên đai nguyên kiện chưa bóc tem. Kiểm tra hôm 9/3 vẫn chưa kích hoạt bảo hành tý nào. 10/3 check lại đã kích hoạt bảo hành. 
-SamSung dòng M32 mới ra gần đây nên công nghệ màn hình rất tốt, nhìn rất đẹp. Màn hình rất sáng mặc dù chỉ để độ sáng trung bình. So với còn Xiaomi Note4 mình mua trc đây đúng là 1 trời 1 vực. Tốc độ đáp ứng của App cũng nhanh hơn hẳn. Cảm biến vân tay cũng nhạy hơn hẳn so với Xiaomi Note4.
-Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.",16,10491098,5,1646901137,Hung Nguyen Manh,1646445845
-,Rất không hài lòng,"TÔI ĐANG KHIẾU NẠI VỚI TIKI, TRANG WEB TIKI VÀ SAMSUNG ĐỀU GHI SP NÀY XÀI CỦ SẠC 25W, TRONG KHI SHOP NÀY BÁN 15W(CỦ 15W CHỈ DÙNG CHO DÒNG GALAXY M31, DONG M32 NÀY XÀI CỦ 25W TO HƠN  VÀ MẮC TIỀN HƠN )
-TÔI CẦN 1 LỜI GIẢI THÍCH RÕ RÀNG, YÊU CẦU TRẢ LẠI TIỀN
-MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM",0,1257211,1,1651410404,Mr Lukas,1651140327
-,Rất không hài lòng,"Sản phẩm đã bị sử dụng và cài đặt đầy đủ rồi
-Không phải set up như lần đầu sử dụng
-Đang nhờ Tiki hỗ trợ giải quyết mà chắc không được vì mình tin tưởng uy tin của shop nê n không có quay video lúc mở hàng
-Chỉ rút kinh nghiệm cho bạn nào mua hàng ở shop thì chú ý hơn
-Haizzz
-Giờ ngồi chờ tiki thôi",1,18353917,1,1657207943,Nguyễn Anh Khoa,1657167213
-,Cực kì hài lòng,"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.",5,19240368,5,1639214716,Nguyễn Thảo ,1638590498
-,Hài lòng,ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,0,8047250,4,1650789955,Lê Thị Liên ,1650450464
-,Hài lòng,"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.",0,7762803,4,1658229468,Nga Trân,1657977522
-,Cực kì hài lòng,"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.",5,783743,5,1639622603,Bùi Nguyễn Quốc Toàn,1638881562
-,Cực kì hài lòng,"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.",3,5730386,5,1642307005,Nguyễn Thị Thanh Nguyệt,1641874011
-,Hài lòng,"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!",0,24855817,4,1653709498,Phong Phú,1653494735
-,Cực kì hài lòng,"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác",0,22223540,5,1647012706,Trần Thị Hồng Thắm ,1646726313
-,Cực kì hài lòng,"Giao hàng nhanh hơn dự kiến 2 ngày. Nhận hàng hôm 9/3, hàng nguyên đai nguyên kiện chưa bóc tem. Kiểm tra hôm 9/3 vẫn chưa kích hoạt bảo hành tý nào. 10/3 check lại đã kích hoạt bảo hành. 
-SamSung dòng M32 mới ra gần đây nên công nghệ màn hình rất tốt, nhìn rất đẹp. Màn hình rất sáng mặc dù chỉ để độ sáng trung bình. So với còn Xiaomi Note4 mình mua trc đây đúng là 1 trời 1 vực. Tốc độ đáp ứng của App cũng nhanh hơn hẳn. Cảm biến vân tay cũng nhạy hơn hẳn so với Xiaomi Note4.
-Mình chuyển qua điện thoại SamSung dùng vì vấn đề bảo mật. Ko tin đc hàng tàu. Nhỡ mấy năm nữa TQ và Mỹ xung đột điện thoại tàu thành cục gạch cũng nên. Mình dùng XiaoMi note4 hay gặp lỗi vặt rất khó chịu.",16,10491098,5,1646901137,Hung Nguyen Manh,1646445845
-,Rất không hài lòng,"TÔI ĐANG KHIẾU NẠI VỚI TIKI, TRANG WEB TIKI VÀ SAMSUNG ĐỀU GHI SP NÀY XÀI CỦ SẠC 25W, TRONG KHI SHOP NÀY BÁN 15W(CỦ 15W CHỈ DÙNG CHO DÒNG GALAXY M31, DONG M32 NÀY XÀI CỦ 25W TO HƠN  VÀ MẮC TIỀN HƠN )
-TÔI CẦN 1 LỜI GIẢI THÍCH RÕ RÀNG, YÊU CẦU TRẢ LẠI TIỀN
-MỌI NGƯỜI KHÔNG TIN THÌ LÊN WEB SAMSUNG MÀ XEM",0,1257211,1,1651410404,Mr Lukas,1651140327
-,Rất không hài lòng,"Sản phẩm đã bị sử dụng và cài đặt đầy đủ rồi
-Không phải set up như lần đầu sử dụng
-Đang nhờ Tiki hỗ trợ giải quyết mà chắc không được vì mình tin tưởng uy tin của shop nê n không có quay video lúc mở hàng
-Chỉ rút kinh nghiệm cho bạn nào mua hàng ở shop thì chú ý hơn
-Haizzz
-Giờ ngồi chờ tiki thôi",1,18353917,1,1657207943,Nguyễn Anh Khoa,1657167213
-,Cực kì hài lòng,"Giao hàng nhanh, sản phẩm nguyên seal, xài ổn. Dịch vụ giao hàng tiki rất tốt, mình mua  tặng người thân nên để nguyên  seal. Sau thời gian xài người dùng bảo máy ổn.",5,19240368,5,1639214716,Nguyễn Thảo ,1638590498
-,Hài lòng,ĐT đẹp  .mới dùng  rất ổn  .mượt mà  .dùng thêm thời gian nữa sẽ đánh giá  tiếp  ạ  .rẻ hơn  mua ở  tgdd .nơi chúng  ổn.......hiiiiiiiiiiiiiiii,0,8047250,4,1650789955,Lê Thị Liên ,1650450464
-,Hài lòng,"Không hiểu vì sao mà đặt mua ngày 16/07/2022, trong khi bảo hành lại được kích hoạt quá sớm từ đầu tháng 5/2022.",0,7762803,4,1658229468,Nga Trân,1657977522
-,Cực kì hài lòng,"Mình mua cho người nhà, hiệu năng tốt, cầm chắc tay và vừa vặn, mặt sau cũng có phong cách riêng, giao hàng đúng hạn.",5,783743,5,1639622603,Bùi Nguyễn Quốc Toàn,1638881562
-,Cực kì hài lòng,"Giao hàng nhanh, pin trâu sử dụng 2-3 ngày mới hết, mình mua cho Ba mình sử dụng thấy ok, giá săn sale ổn áp, hiện tại chưa thấy gì bất ổn.",3,5730386,5,1642307005,Nguyễn Thị Thanh Nguyệt,1641874011
-,Hài lòng,"Giao hàng đúng như hình, còn nguyên seal, xài ok...Mong shop giữ uy tín mãi  như vậy, khách hàng có niềm tin sẽ ủng hộ lâu dài nhé!",0,24855817,4,1653709498,Phong Phú,1653494735
-,Cực kì hài lòng,"đã nhận hàng,chính hãng chuẩn,sử dụng ổn nhạy,tuy nhiên điểm trừ là ko có ốp kho có dán màn hình ko có tai nghe như dongc sp khác",0,22223540,5,1647012706,Trần Thị Hồng Thắm ,1646726313
-,Cực kì hài lòng,"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.",3,22208906,5,1638363439,Liệu Lê,1637937565
-,Cực kì hài lòng,"* Sản phẩm rất xinh đẹp tuyệt vời, tôi không thể trông đợi gì hơn. Cảm ơn nhà cung cấp, nhà sản xuất, cảm ơn người bán hàng, cảm ơn sàn thương mại điện tử, cảm ơn người vận chuyển để tôi có cơ hội dùng sản phẩm tốt như thế này.
-
-* Hàng đóng gói rất đẹp. Quả nhiên người bán đã gửi gắm rất nhiều tâm tư và tình cảm trong lúc gói hàng. Hộp không có dấu hiệu bị móp, chứng tỏ bộ phận vận chuyển đã nâng như nâng trứng, hứng như hứng hoa. Xin nghiêng mình cảm ơn vì tất cả.
-
-* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.",0,494671,5,1640862766,Trần Nguyệt Xuân Như,1640831960
-,Cực kì hài lòng,"Hàng chuẩn mới nguyên seal, đã kích hoạt bảo hành trước khoảng 10 ngày. Máy gọn nhẹ, màn không quá nét, chậm nhưng đủ dùng lướt web, xem phim, pin không quá trâu, nhìn chung ngon trong tầm giá!!!
-Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.",0,6625594,5,1647193406,Nguyễn Toàn,1647020016
-,Cực kì hài lòng,"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)",0,6562218,5,1635698670,,1634686040
-,Cực kì hài lòng,"Giao hàng nhanh, sp nguyên seal cảm giác được bóc tem rất đã kkk.
-
-Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.",3,1978942,5,1636949066,Sơn Đặng,1634623503
-,Cực kì hài lòng,"Bề ngoài thiết kế bằng kim loại nhìn sang trọng, máy cấu hình ok khi sử dụng  cơ bản xem youtube và đọc báo ko nên tập trung vào game dễ gây nóng máy",0,14480365,5,1650806794,Thắng Nguyễn,1650541410
-,Bình thường,"SP đang gặp chút lỗi: tác vụ chậm, hay thoát ra khi đang chạy ứng dụng. Đang ko biết có nên bảo hành không. Thân máy đẹp, pin khỏe, màu sắc đẹp. Bị 2 lỗi kia nên xử lý sao Shop??",0,908911,3,1638413228,Lưu Tấn Thông,1637993945
-,Cực kì hài lòng,"sản phẩm ban đầu nhìn khá là ok, đóng gói cẩn thận! giao hàng nhanh 2 ngày đã nhận đc hàng!!!!?!! .....đg bắt đầu trải nghiệm, chắc ổn!",0,19478214,5,1656567288, Hồng Nhâm,1656400905
-,Cực kì hài lòng,"mình nhận máy rồi, *** thử chạy thấy mượt nhưng tiếc là không có tặng kèm bao da",0,10145156,5,1643094251,Lan Lan,1642952711
-,Cực kì hài lòng,"tiki giao hàng nhanh, đóng gói rats kỹ, nhân viên giao hàng nhiệt tình chu đáo, máy đẹp cong nguyên siêu, mua tăng cháu nên chưa đánh giá máy. Noi chung rất hài lòng.",0,11391461,5,1637482306,Nguyễn Đào,1636906879
-,Cực kì hài lòng,"Máy đẹp. Ổn trong tầm giá. Pin khá lâu. Máy hơi chậm, màn không mịn. Cũng khó yc cao hơn với giá 3,86tr. Máy đã kích hoạt bảo hành 10/11/2021. Có lẽ là hàng tồn đợt km 11/11. Mình đặt mua 26/11. Vẫn nguyên seal, zin, chưa thấy lỗi lầm gì.",3,22208906,5,1638363439,Liệu Lê,1637937565
-,Cực kì hài lòng,"* Sản phẩm rất xinh đẹp tuyệt vời, tôi không thể trông đợi gì hơn. Cảm ơn nhà cung cấp, nhà sản xuất, cảm ơn người bán hàng, cảm ơn sàn thương mại điện tử, cảm ơn người vận chuyển để tôi có cơ hội dùng sản phẩm tốt như thế này.
-
-* Hàng đóng gói rất đẹp. Quả nhiên người bán đã gửi gắm rất nhiều tâm tư và tình cảm trong lúc gói hàng. Hộp không có dấu hiệu bị móp, chứng tỏ bộ phận vận chuyển đã nâng như nâng trứng, hứng như hứng hoa. Xin nghiêng mình cảm ơn vì tất cả.
-
-* Thời gian vận chuyển rất hợp lí. Tôi đã đặt hàng với tâm thế hào hứng chờ đợi để được trải nghiệm sản phẩm và tôi không hề bị chờ mỏi cổ. Có thể thấy bên vận chuyển không quản ngại thời tiết và đường xá xa xôi để đưa sản phẩm cho tôi trong thời gian ngắn nhất.",0,494671,5,1640862766,Trần Nguyệt Xuân Như,1640831960
-,Cực kì hài lòng,"Hàng chuẩn mới nguyên seal, đã kích hoạt bảo hành trước khoảng 10 ngày. Máy gọn nhẹ, màn không quá nét, chậm nhưng đủ dùng lướt web, xem phim, pin không quá trâu, nhìn chung ngon trong tầm giá!!!
-Tiki giao cực nhanh, đóng gói cẩn thận, 5 sao.",0,6625594,5,1647193406,Nguyễn Toàn,1647020016
-,Cực kì hài lòng,"Tôi giận Samsung ghê gớm. Để hết hàng mãi ko có hàng về nên hnay tôi phải mua với giá cao hơn cả giá niêm yết mà lại không kèm bao da. Sau đó tôi phải mua bao da của chính nó ở shop khác với giá cắt cổ. Tổng cộng tôi mua chênh hơn cả 1.2 triệu đồng. (Hãng bán 3.890K tặng bao da, tôi mua 2 món đó hết 5.090K)",0,6562218,5,1635698670,,1634686040
-,Cực kì hài lòng,"Giao hàng nhanh, sp nguyên seal cảm giác được bóc tem rất đã kkk.
-
-Vì là bản Lite nên xài với mục đích lướt web/coi Youtube thì khá ổn, chơi game thì hơi lag vì cấu hình ko mạnh. Giá ok trong tầm phân khúc trung.",3,1978942,5,1636949066,Sơn Đặng,1634623503
+sentence,sentiment,topic
+Đội ngũ bảo trì quá thưa thớt dẫn đến không đảm bảo được chất lượng sửa chữa thiết bị.,negative,facility
+Phương pháp giảng dạy phù hợp với các đối tượng sinh viên khác nhau.,neutral,curriculum
+Chương trình học giúp tôi trở thành một chuyên gia trong lĩnh vực của mình.,positive,curriculum
+Tôi nghĩ rằng chương trình đào tạo có thể có thêm các môn học về lịch sử và văn hóa để sinh viên hiểu rõ hơn về đất nước và con người Việt Nam,neutral,curriculum
+Chị ấy luôn tỉ mỉ trong công việc.,neutral,others
+Tôi không thích giảng viên này vì anh ta không có kỷ luật.,negative,lecturer
+Giảng viên này quá yêu cầu với sinh viên khiến họ không thể tự do học tập.,negative,lecturer
+Anh bạn là người luôn tôn trọng ý kiến của người khác và dễ chịu hơn bao giờ hết.,positive,others
+Thầy này là một người giáo viên rất tuyệt vời.,positive,lecturer
+Thầy luôn đặt mục tiêu rõ ràng cho học viên nên học viên biết mình phải làm gì để đạt được điểm cao.,positive,lecturer
+"Các phòng thực hành về kiến trúc và xây dựng rất đầy đủ và chuyên nghiệp, giúp tôi nâng cao kỹ năng thiết kế và xây dựng.",positive,facility
+"Phòng học tập tại trường rất thoáng và có ánh sáng tự nhiên, giúp tôi tập trung và học tập hiệu quả hơn.",positive,facility
+"Cô ấy là một người rất linh hoạt và đa tài, luôn sẵn sàng dẫn đầu nhóm trong các dự án khác nhau.",positive,others
+Thầy rất kiên nhẫn và sẵn sàng phải giải đáp những thắc mắc của sinh viên nhiều lần.,positive,lecturer
+Các phòng thí nghiệm tại trường được trang bị đầy đủ và là nơi lý tưởng để học tập và nghiên cứu.,positive,facility
+Thầy giúp đỡ sinh viên trở nên tự tin và khả năng phân tích được đánh giá cao.,positive,lecturer
+Phòng học quá tối.,negative,facility
+Chương trình học của trường rất đa dạng và bao gồm nhiều ngành học hấp dẫn.,neutral,curriculum
+Cô ấy rất nhanh nhẹn và dễ mến.,neutral,others
+Chương trình đào tạo giúp tôi nâng cao kỹ năng tư duy logic và phản biện.,positive,curriculum
+Bạn của tôi luôn làm việc với chữ tín và trung thực.,positive,others
+Thầy thường sử dụng các trò chơi và hoạt động để giúp sinh viên học tập tích cực hơn.,neutral,lecturer
+Có những sinh viên đánh giá khách quan và đưa ra các ý kiến xây dựng sau mỗi bài học.,neutral,others
+Cô ấy rất cẩn thận và chi tiết.,neutral,others
+Các cơ sở vật chất tại đây khá đầy đủ.,neutral,facility
+Thiếu trạm xe buýt hoặc tuyến xe bus gần đó.,negative,facility
+"Các câu hỏi và nhiệm vụ được thiết kế rất thú vị, giúp các em tập trung hơn trong quá trình học tập.",positive,curriculum
+Cô ấy là một người rất tỉ mỉ và chăm chỉ trong công việc.,neutral,others
+"Thầy/cô rất tận tâm với từng sinh viên, chú trọng phát triển tối đa tiềm năng của mỗi người.",positive,lecturer
+"Anh ta thường làm việc chỉ cho lợi ích cá nhân, không suy nghĩ tới lợi ích nhóm.",negative,others
+Giờ học của thầy luôn trôi chảy và hiệu quả.,positive,lecturer
+The university provides a comfortable and conducive environment for learning.,neutral,facility
+Tôi học được nhiều điều mới mẻ trong quá trình học và có thể áp dụng vào công việc của mình trong tương lai.,positive,curriculum
+Anh ấy rất ích kỷ và luôn tìm cách chỉ trích người khác.,negative,others
+Thầy luôn đón tiếp và trả lời thắc mắc của chúng tôi một cách tận tình.,positive,lecturer
+Thầy sử dụng nhiều công nghệ và phương tiện học tập hiện đại để giảng dạy.,neutral,lecturer
+Anh ta không đáng để tin tưởng.,negative,others
+Giáo trình cần được cập nhật về các công nghệ mới trong ngành nghề.,neutral,curriculum
+Thiết bị và trang thiết bị của trường rất chất lượng và đáp ứng được các nhu cầu học tập của tôi.,positive,facility
+Tôi luôn cảm thấy được giúp đỡ và hỗ trợ khi làm việc và học tập với bạn của tôi.,positive,others
+Thầy/Cô là người có kinh nghiệm và kiến thức sâu rộng trong lĩnh vực giảng dạy.,positive,others
+Đội ngũ nhân viên cơ sở vật chất và an ninh của trường rất tận tâm và chuyên nghiệp.,neutral,facility
+Ký túc xá của trường có nhiều phòng học chung rất thú vị và tiện lợi.,positive,facility
+Thầy rất thấu hiểu và đồng cảm với sinh viên.,neutral,lecturer
+Giảng viên rất tốt và đóng góp tích cực cho sự phát triển của sinh viên.,neutral,lecturer
+Cô bạn đó rất lười biếng và không bao giờ làm việc đúng hạn.,negative,others
+Giảng viên đưa ra các công cụ học tập mới để giúp cho sinh viên học tập hiệu quả hơn.,neutral,lecturer
+Các giảng viên tại trường tôi thật tốt và xuất sắc trong việc truyền đạt kiến thức. Tôi rất tự hào khi là sinh viên của họ.,positive,lecturer
+Chương trình đào tạo chất lượng và đa dạng.,neutral,curriculum
+Chương trình đào tạo được tối ưu hóa để giúp sinh viên không bỏ lỡ bất kỳ triển vọng nào trên con đường phát triển nghề nghiệp.,positive,curriculum
+Anh chàng này có tính cách dễ gần và thân thiện với mọi người.,positive,others
+Đại học này có các cơ sở vật chất hiện đại và đầy đủ tiện nghi.,positive,curriculum
+"Khu vực để xe đạp được bố trí thuận tiện, giúp cho sinh viên có thể đến trường bằng xe đạp trong sự an toàn.",positive,facility
+"Thầy cô này đôi lúc phân tích quá chi tiết, khiến cho học sinh khó tóm tắt được ý chính.",neutral,lecturer
+Thầy giáo đưa ra nhiều tài liệu hữu ích để giúp sinh viên tìm hiểu sâu vấn đề.,neutral,lecturer
+"Phòng thư giãn và giải trí được bố trí đầy đủ, giúp cho các sinh viên có một không gian giải trí đầy đủ.",neutral,facility
+Trường đại học của tôi có nhiều trung tâm văn hóa và giáo dục phục vụ sinh viên.,neutral,facility
+Anh chàng này là một người rất hòa đồng và vui vẻ.,positive,others
+Có dịch vụ cho thuê xe đạp giúp sinh viên di chuyển trong khuôn viên và tiện lợi hơn.,neutral,facility
+Cô ấy không được tận tâm trong giảng dạy và người học khó hiểu kiến thức.,negative,others
+Hệ thống thư viện phong phú,neutral,facility
+"Học viên được học tập và làm việc trong môi trường năng động, thú vị và đầy sáng tạo.",positive,curriculum
+Đồng nghiệp của tôi rất thông minh và có khả năng đưa ra những lời khuyên đúng đắn.,positive,others
+Bạn của tôi là một người hết sức năng động và hoạt bát.,neutral,others
+"Giảng viên quá ít, dẫn đến không đảm bảo cho chất lượng giảng dạy.",negative,curriculum
+Thầy đề cao cách suy nghĩ độc lập và khả năng phân tích của sinh viên.,positive,lecturer
+Tôi cảm thấy hài lòng với độ khó của bài tập.,neutral,lecturer
+Người này là người rất hòa đồng và có tinh thần cởi mở.,neutral,others
+Nhà vệ sinh ở đây được giữ sạch sẽ và tiện nghi.,neutral,facility
+Tôi thấy mình có sự tiến bộ hàng ngày trong việc học tập và phát triển bản thân trong chương trình đào tạo này.,positive,curriculum
+Các phòng học không được sạch sẽ mỗi ngày.,negative,facility
+Thầy giáo đưa ra nhiều phương pháp học tập phù hợp với nhu cầu mỗi cá nhân sinh viên.,neutral,lecturer
+Thầy giúp đỡ sinh viên nắm bắt được cách thức rèn luyện các kỹ năng trong lĩnh vực của mình.,positive,lecturer
+"Thầy cô giảng dạy đều là những chuyên gia trong lĩnh vực mình giảng dạy, giúp tôi học được nhiều kiến thức mới.",positive,curriculum
+Tôi được học những kiến thức thực tế và ứng dụng được vào công việc.,positive,curriculum
+Bạn của tôi có khả năng tự hoàn thiện mình một cách tuyệt vời.,positive,others
+Bạn của tôi rất chăm chỉ và luôn hoàn thành công việc đúng giờ.,positive,others
+Tầm quan trọng của môn học được giải thích rõ ràng.,positive,curriculum
+Giáo trình có sự phân chia rõ ràng giữa các khóa học và thuật ngữ chuyên ngành.,neutral,curriculum
+Tôi rất cảm kích với sự đầu tư vào các phòng máy tính hiện đại tại đây để phục vụ cho học tập của sinh viên.,positive,facility
+Các giáo viên chưa sẵn sàng giúp đỡ sinh viên nếu có bất kỳ thắc mắc nào.,negative,curriculum
+"Trường có các phòng ngủ, phòng nấu ăn riêng cho sinh viên ở xa rất thuận tiện.",neutral,facility
+"Chương trình học phát triển tư duy và kỹ năng giải quyết vấn đề, giúp tôi trở thành một người tư duy trong công việc.",positive,curriculum
+"Nhà xe của trường luôn sạch sẽ, an toàn cho xe cộ của sinh viên.",positive,facility
+Tòa nhà của trường rất cũ kỹ và không được bảo dưỡng đúng cách.,negative,facility
+"Tôi thấy rằng trường tôi chưa đầu tư đúng mức vào cơ sở vật chất, điều này dẫn đến việc giảng dạy và học tập kém hiệu quả.",negative,facility
+Trường đại học của tôi có thang máy phục vụ cho sinh viên có khó khăn về sức khỏe hoặc vận động.,neutral,facility
+Điểm bán đồ ăn nhanh nằm trong trường cung cấp cho sinh viên các loại thức ăn đa dạng.,neutral,facility
+"Đội ngũ giáo viên và nhân viên tại trường có trình độ chuyên môn cao và tận tâm với việc giảng dạy, giúp cho sinh viên có thể học tập một cách nhanh chóng và hiệu quả.",positive,facility
+Giảng viên không bao giờ trả lời email của tôi,negative,lecturer
+Anh/chị rất đáng kính trong mắt tôi.,positive,others
+Chị ấy có khả năng đưa ra các quyết định chính xác và hiệu quả.,neutral,others
+"Chương trình đào tạo có thể cần phải tăng cường hệ thống hỗ trợ sinh viên, đặc biệt là những sinh viên có hoàn cảnh khó khăn",neutral,curriculum
+Thiếu sự khuyến khích và động viên cho sinh viên đối với việc học tập.,negative,curriculum
+Không có đủ khu vực để sinh viên có thể tự do tập luyện nghệ thuật.,negative,facility
+Thầy không có sự cảm thông và sẵn sàng lắng nghe ý kiến của sinh viên.,negative,lecturer
+Chị ấy là người rất đáng tin cậy và chín chắn.,neutral,others
+The university has a good range of research facilities.,neutral,facility
+Cấu trúc của chương trình đào tạo chặt chẽ.,neutral,curriculum
+Giảng viên xây dựng một môi trường học tập thoải mái và tích cực.,neutral,l
