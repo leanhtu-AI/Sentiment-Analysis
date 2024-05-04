@@ -1,15 +1,16 @@
-from tensorflow.train import latest_checkpoint
+import sys
+# adding Folder_2 to the system path
+sys.path.insert(0, 'utils/')
 from tensorflow.keras.models import load_model
-from create_model import create_model
+from create_model import create_model_res
 from transformers import TFAutoModel
-from utils.tokenizer import PRETRAINED_MODEL
-from utils.variables import df_test, test_tf_dataset
-from utils.config import MODEL_PATH, BATCH_SIZE
+from tokenizer import PRETRAINED_MODEL
+from variables_res import df_test_res, test_res_dataset
+from config import MODEL_PATH, BATCH_SIZE
 import numpy as np
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
-categories = df_test.columns[1:]
-
+categories = df_test_res.columns[1:]
 # Predict on test dataset
 def print_acsa_pred_test(replacements, categories, sentence_pred):
     sentiments = map(lambda x: replacements[x], sentence_pred)
@@ -21,10 +22,10 @@ def predict_test(model, inputs, batch_size=1, verbose=0):
     return np.argmax(y_pred, axis=-1) # sentiment values (position that have max value)
 
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-reloaded_model = create_model(pretrained_bert)
-reloaded_model.load_weights(f'{MODEL_PATH}/best.h5')
-y_pred = predict_test(reloaded_model, test_tf_dataset, BATCH_SIZE, verbose=1)
-reloaded_model.evaluate(test_tf_dataset, batch_size=BATCH_SIZE, verbose=1)
+reloaded_model = create_model_res(pretrained_bert)
+reloaded_model.load_weights(f'{MODEL_PATH}/res.h5')
+y_pred = predict_test(reloaded_model, test_res_dataset, BATCH_SIZE, verbose=1)
+reloaded_model.evaluate(test_res_dataset  , batch_size=BATCH_SIZE, verbose=1)
 
 print_acsa_pred_test(replacements, categories, y_pred[0])
 

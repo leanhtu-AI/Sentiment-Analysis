@@ -1,9 +1,9 @@
 from tensorflow.train import latest_checkpoint
 from tensorflow.keras.models import load_model
-from create_model import create_model
+from create_model import create_model_stu
 from transformers import TFAutoModel
 from utils.tokenizer import PRETRAINED_MODEL
-from utils.variables import df_test, tokenizer
+from utils.variables_student import df_test_stu, tokenizer
 from utils.preprocess_text import preprocess
 import numpy as np
 from tensorflow.data import Dataset
@@ -25,13 +25,17 @@ def load_model():
 
 reloaded_model = load_model()
 
-# # local
+
 # pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
 # reloaded_model = create_model(pretrained_bert)
 # reloaded_model.load_weights('model/best.h5')
 
+pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
+reloaded_model = create_model_stu(pretrained_bert)
+reloaded_model.load_weights('model/student.h5')
+
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
-categories = df_test.columns[1:]
+categories = df_test_stu.columns[1:]
 
 def print_acsa_pred(replacements, categories, sentence_pred, confidence_scores):
     sentiments = map(lambda x: replacements[x], sentence_pred)

@@ -1,3 +1,8 @@
+import sys
+# adding Folder_2 to the system path
+sys.path.insert(0, 'utils/')
+sys.path.insert(1, 'predict/')
+
 import streamlit as st
 import json
 import requests
@@ -5,20 +10,18 @@ from streamlit_lottie import st_lottie
 import time
 import pandas as pd
 import os
-from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency
-from utils.preprocess_user_data import preprocess_data
-from utils.tokenizer import tokenize_function, call_tokenizer
-from utils.preprocess_text import preprocess
-from predict import show_predict_text,process_predict_csv, show_predict_csv
+from preprocess_user_data import auto_detect_filter_data, take_info_phone, sentiments_frequency
+from preprocess_user_data import preprocess_data
+from tokenizer import tokenize_function, call_tokenizer, PRETRAINED_MODEL
+from preprocess_text import preprocess
+from predict_phone import show_predict_text,process_predict_csv, show_predict_csv
 import matplotlib.pyplot as plt
 import seaborn as sns
 from annotated_text import annotated_text
-import time
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
     st.session_state.file_uploaded = False
-
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
@@ -66,26 +69,16 @@ def plot_sentiment_frequencies(sentiment_df):
     ax.legend(sentiment_df['sentiments'], loc="upper left", bbox_to_anchor=(1, 0, 0.5, 1))
     # Display pie chart using Streamlit
     st.pyplot(fig)
-
-lottie_ai = load_lottiefile("lottiefiles/logo.json")
-lottie_robot = load_lottiefile("lottiefiles/robot_orange.json")
-
+lottie_phone = load_lottiefile("lottiefiles/phone.json")
 # sidebar decoration
 with st.sidebar:
-    st_lottie(lottie_ai, speed=1, loop=True, quality="low")
+    st_lottie(lottie_phone, speed=1, loop=True, quality="low")
     st.info("Select a choice below.")
-    choice = st.radio('Navigation',['Home','Upload','Apply ABSA','More information','About us'])
+    choice = st.radio('Navigation',['Upload','Apply ABSA','More information'])
 if 'absa_applied' not in st.session_state:
     st.session_state.absa_applied = False  # Initialize the flag if it doesn't exist in session state
-# hanlde choice
-if choice == 'Home':
-    st.title("こんにちは! Welcome to our ABSA web app😊")
-    st_lottie(lottie_robot, speed=1, loop=True, quality="low")
-    # snowfall
-    if st.button("❄️降雪❄️"):
-        st.snow()
 
-elif choice == 'Upload':
+if choice == 'Upload':
     # Initialize session state variable if not already present
     st.subheader("🤖📢 Before upload, test our model if you want to know what we will do 👌")
 
@@ -112,14 +105,14 @@ elif choice == 'Upload':
         st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
 
     elif not st.session_state.file_uploaded:
-        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo = pd.read_csv("data/phone/tikiData_small.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
         st.session_state.file_uploaded = True
 
     elif st.session_state.file_uploaded and file is None:
-        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo = pd.read_csv("data/phone/tikiData_small.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
@@ -172,7 +165,7 @@ elif choice == "More information":
             st.dataframe(nan_rows)
         st.divider()
         st.subheader("Let's Explore Your Data")
-        aspect_df = take_info(df)
+        aspect_df = take_info_phone(df)
         # Example list of sorted top aspect names
         top_aspect_names = aspect_df.nlargest(3, 'Frequency')['Aspect'].tolist()
         sorted_top_aspect_names = aspect_df[aspect_df['Aspect'].isin(top_aspect_names)].sort_values(by='Frequency', ascending=False)['Aspect'].tolist()
@@ -197,43 +190,3 @@ elif choice == "More information":
         st.markdown(html_str, unsafe_allow_html=True)        
         plot_sentiment_frequencies(sentiment_df)
 
-elif choice == 'About us':
-    st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
-    url_company = "https://jvb-corp.com/vi/"
-    url_git = "https://github.com/leanhtu-AI/Sentiment-Analysis.git"
-    col1, col2 = st.columns([2, 1])
-
-    with col1:
-        st.markdown("<h2 style='color: black;'>🤝Our Organization🤝</h2>", unsafe_allow_html=True)
-        annotated_text(
-            "Hi, I'm",
-            ("Junior-VB", "", "#faa"),
-            "🤖"
-        )
-        st.markdown("""- I was created by a team of AI interns from JVB Vietnam company.\n - Beside ABSA model, we also provide other technology solutions.\n - Check out this [link](%s) for more information about our group""" % url_company)
-        st.markdown("")
-        st.markdown("")
-        st.markdown("<h2 style='color: black;'>🐙Github Repository😺</h2>", unsafe_allow_html=True)
-        st.markdown("""- Want to deep understand how I work? Please visit this [repo](%s).\n - Every usage and contribute to the code are welcome!""" % url_git)
-        annotated_text(
-            ("Transformers🤖", "", "#fea"),
-            ("Underthesea🌊", "", "#8ef"),
-            ("PhoBert💕", "", "#ff80ed"),     
-            ("Tensorflow🌞", "", "#afa"),
-            ("Hugging Face🤗", "", "#faa"),
-        )
-        st.markdown("")
-        st.markdown("")
-        url_facebook = 'https://www.facebook.com/lnht1808.secsip'
-        url_github = 'https://github.com/leanhtu-AI'
-        url_gmail = 'https://mail.google.com/mail/u/3/#inbox'
-        st.markdown("<h2 style='color: black;'>📞Contact🫶</h2>", unsafe_allow_html=True)
-        st.markdown("""- [Facebook](%s)\n- [Gmail](%s)\n- [Github](%s)""" % (url_facebook, url_gmail, url_github))
-
-    with col2:
-        lottie_col1 = load_lottiefile("lottiefiles/hello.json")
-        st_lottie(lottie_col1, speed=1, loop=True, quality="low")
-        lottie_col1 = load_lottiefile("lottiefiles/github.json")
-        st_lottie(lottie_col1, speed=1, loop=True, quality="low")
-        
-    st.markdown("<h4 style='text-align: center; color: black; opacity: 0.5;'>ありがとう ございます。</h4>", unsafe_allow_html=True)

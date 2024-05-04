@@ -1,8 +1,8 @@
 import pandas as pd
 import re
-from utils.preprocess_text import preprocess
+from preprocess_text import preprocess
 import matplotlib.pyplot as plt
-
+import ast
 def auto_detect_filter_data(input_path, output_path):
     """
     Lọc và lưu trữ cột đánh giá từ một tệp CSV vào một tệp mới.
@@ -41,7 +41,7 @@ def preprocess_data(df):
         df[column] = df[column].apply(preprocess)
     return df
 
-def take_info(df):
+def take_info_phone(df):
     """
     Đếm số lần xuất hiện của các aspect đã được chỉ định từ cột "label" trong DataFrame.
 
@@ -68,7 +68,57 @@ def take_info(df):
     # Tạo DataFrame từ dict aspect_counts
     aspect_df = pd.DataFrame(aspect_counts.items(), columns=['Aspect', 'Frequency'])
     return aspect_df
+def take_info_res(df):
+    regex = r'^([^,]+)'
+    aspect_list = ['FOOD#PRICES', 'DRINKS#STYLE&OPTIONS', 'FOOD#STYLE&OPTIONS', 'RESTAURANT#MISCELLANEOUS', 'SERVICE#GENERAL', 'DRINKS#QUALITY', 'RESTAURANT#PRICES', 'LOCATION#GENERAL', 'DRINKS#PRICES', 'RESTAURANT#GENERAL', 'AMBIENCE#GENERAL', 'FOOD#QUALITY']
+    aspect_counts = {aspect: 0 for aspect in aspect_list}
 
+    for label_data in df['label']:
+        # Handle cases where label_data is a string representation of a list
+        if isinstance(label_data, str):
+            try:
+                labels = ast.literal_eval(label_data)
+            except ValueError:
+                continue  # Skip rows where the data can't be evaluated to a list
+        else:
+            labels = label_data  # Assuming labels is already a list (if not, handle other cases)
+
+        for label in labels:
+            match = re.match(regex, label)
+            if match:
+                aspect = match.group(1)
+                if aspect in aspect_list:
+                    aspect_counts[aspect] += 1
+
+    return pd.DataFrame(list(aspect_counts.items()), columns=['Aspect', 'Frequency'])
+
+def take_info_stu(df):
+    """
+    Đếm số lần xuất hiện của các aspect đã được chỉ định từ cột "label" trong DataFrame.
+
+    Parameters:
+    - df (DataFrame): DataFrame chứa cột "label" cần kiểm tra.
+
+    Returns:
+    DataFrame: DataFrame chứa hai cột "aspect" và "số lần xuất hiện".
+    """
+    regex = r'(\w+),\w+,\d+\.\d+,\d+'
+
+    aspect_list = ['facility','lecturer','others','training_program']
+
+    aspect_counts = {aspect: 0 for aspect in aspect_list}
+
+    for label in df['label']:
+        # Kiểm tra nếu giá trị là chuỗi
+        if isinstance(label, str):
+            matches = re.findall(regex, label)
+            for aspect in matches:
+                if aspect in aspect_list:
+                    aspect_counts[aspect] += 1
+
+    # Tạo DataFrame từ dict aspect_counts
+    aspect_df = pd.DataFrame(aspect_counts.items(), columns=['Aspect', 'Frequency'])
+    return aspect_df
 def sentiments_frequency(df):
     # Define a regular expression pattern to extract sentiment values
     pattern = r"'[^']*?,([^']*?),"
