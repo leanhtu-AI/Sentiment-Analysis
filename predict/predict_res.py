@@ -25,7 +25,7 @@ import streamlit as st
 
 # reloaded_model = load_model()
 
-# local -
+# local - res
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
 reloaded_model = create_model_res(pretrained_bert)
 reloaded_model.load_weights('model/res.h5')
