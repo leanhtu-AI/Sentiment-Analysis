@@ -1,9 +1,9 @@
 from tensorflow.train import latest_checkpoint
 from tensorflow.keras.models import load_model
-from create_model import create_model_stu
+from utils.create_model import create_model_hotel
 from transformers import TFAutoModel
 from utils.tokenizer import PRETRAINED_MODEL
-from utils.variables_student import df_test_stu, tokenizer
+from utils.variables_hotel import df_test_hotel, tokenizer
 from utils.preprocess_text import preprocess
 import numpy as np
 from tensorflow.data import Dataset
@@ -25,17 +25,13 @@ import streamlit as st
 
 # reloaded_model = load_model()
 
-
-# pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-# reloaded_model = create_model(pretrained_bert)
-# reloaded_model.load_weights('model/best.h5')
-
+# local -
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
-reloaded_model = create_model_stu(pretrained_bert)
-reloaded_model.load_weights('model/student.h5')
+reloaded_model = create_model_hotel(pretrained_bert)
+reloaded_model.load_weights('model/hotel.h5')
 
-replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
-categories = df_test_stu.columns[1:]
+replacements = {0: None, 1: 'positive', 2: 'negative', 3: 'neutral'}
+categories = df_test_hotel.columns[1:]
 
 def print_acsa_pred(replacements, categories, sentence_pred, confidence_scores):
     sentiments = map(lambda x: replacements[x], sentence_pred)
