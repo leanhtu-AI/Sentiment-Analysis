@@ -36,7 +36,7 @@
 </p>
 
 <p align="center">
-  <img src="lottiefiles/example.gif" alt="Alt Text">
+  <img src="lottiefiles/demoappv2.gif" alt="Alt Text">
 <p>
 
 ## 📁Data
