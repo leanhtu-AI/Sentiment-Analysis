@@ -68,6 +68,33 @@ def take_info_phone(df):
     # Tạo DataFrame từ dict aspect_counts
     aspect_df = pd.DataFrame(aspect_counts.items(), columns=['Aspect', 'Frequency'])
     return aspect_df
+
+
+def take_info_hotel(df):
+    regex = r'^([^,]+)'
+    aspect_list = ['FACILITIES#CLEANLINESS', 'FACILITIES#COMFORT', 'FACILITIES#DESIGN&FEATURES', 'FACILITIES#GENERAL', 'FACILITIES#MISCELLANEOUS', 'FACILITIES#PRICES', 'FACILITIES#QUALITY', 'FOOD&DRINKS#MISCELLANEOUS', 'FOOD&DRINKS#PRICES', 'FOOD&DRINKS#QUALITY', 'FOOD&DRINKS#STYLE&OPTIONS', 'HOTEL#CLEANLINESS', 'HOTEL#COMFORT', 'HOTEL#DESIGN&FEATURES', 'HOTEL#GENERAL', 'HOTEL#MISCELLANEOUS', 'HOTEL#PRICES', 'HOTEL#QUALITY', 'LOCATION#GENERAL', 'ROOM_AMENITIES#CLEANLINESS', 'ROOM_AMENITIES#COMFORT', 'ROOM_AMENITIES#DESIGN&FEATURES', 'ROOM_AMENITIES#GENERAL', 'ROOM_AMENITIES#MISCELLANEOUS', 'ROOM_AMENITIES#PRICES', 'ROOM_AMENITIES#QUALITY', 'ROOMS#CLEANLINESS', 'ROOMS#COMFORT', 'ROOMS#DESIGN&FEATURES', 'ROOMS#GENERAL', 'ROOMS#MISCELLANEOUS', 'ROOMS#PRICES', 'ROOMS#QUALITY', 'SERVICE#GENERAL']
+
+    aspect_counts = {aspect: 0 for aspect in aspect_list}
+
+    for label_data in df['label']:
+        # Handle cases where label_data is a string representation of a list
+        if isinstance(label_data, str):
+            try:
+                labels = ast.literal_eval(label_data)
+            except ValueError:
+                continue  # Skip rows where the data can't be evaluated to a list
+        else:
+            labels = label_data  # Assuming labels is already a list (if not, handle other cases)
+
+        for label in labels:
+            match = re.match(regex, label)
+            if match:
+                aspect = match.group(1)
+                if aspect in aspect_list:
+                    aspect_counts[aspect] += 1
+
+    return pd.DataFrame(list(aspect_counts.items()), columns=['Aspect', 'Frequency'])
+
 def take_info_res(df):
     regex = r'^([^,]+)'
     aspect_list = ['FOOD#PRICES', 'DRINKS#STYLE&OPTIONS', 'FOOD#STYLE&OPTIONS', 'RESTAURANT#MISCELLANEOUS', 'SERVICE#GENERAL', 'DRINKS#QUALITY', 'RESTAURANT#PRICES', 'LOCATION#GENERAL', 'DRINKS#PRICES', 'RESTAURANT#GENERAL', 'AMBIENCE#GENERAL', 'FOOD#QUALITY']
