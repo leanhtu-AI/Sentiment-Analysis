@@ -8,22 +8,27 @@ EPOCHS = 1
 
 MODEL_PATH = 'model'
 
-TRAIN_PATH_PHONE = "./data/phone/train.csv"
-VAL_PATH_PHONE = "./data/phone/val.csv"
-TEST_PATH_PHONE = "./data/phone/test.csv"
+# TRAIN_PATH_PHONE = "./data/phone/train.csv"
+# VAL_PATH_PHONE = "./data/phone/val.csv"
+# TEST_PATH_PHONE = "./data/phone/test.csv"
 
 # TRAIN_PATH_RES = "./data/res/train.csv"
 # VAL_PATH_RES= "./data/res/val.csv"
 # TEST_PATH_RES = "./data/res/test.csv"
 
 # For testing traning with small data when you don't have gpu or training on cloud
-# TRAIN_PATH_PHONE = "./data/phone/train_small.csv"
-# VAL_PATH_PHONE = "./data/phone/val_small.csv"
-# TEST_PATH_PHONE = "./data/phone/test_small.csv"
+TRAIN_PATH_PHONE = "./data/phone/train_small.csv"
+VAL_PATH_PHONE = "./data/phone/val_small.csv"
+TEST_PATH_PHONE = "./data/phone/test_small.csv"
 
 TRAIN_PATH_RES = "./data/res/train_small.csv"
 VAL_PATH_RES= "./data/res/val_small.csv"
 TEST_PATH_RES = "./data/res/test_small.csv"
+
+TRAIN_PATH_STU = "./data/student/small/train.csv"
+VAL_PATH_STU= "./data/student/small/val.csv"
+TEST_PATH_STU = "./data/student/small/test.csv"
+
 
 DROP_OUT = 0.2
 
