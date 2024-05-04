@@ -30,6 +30,12 @@ VAL_PATH_STU= "./data/student/small/val.csv"
 TEST_PATH_STU = "./data/student/small/test.csv"
 
 
+TRAIN_PATH_HOTEL = "./data/hotel/hotel_train.csv"
+VAL_PATH_HOTEL= "./data/hotel/hotel_val.csv"
+TEST_PATH_HOTEL = "./data/hotel/hotel_test.csv"
+
+LEARNING_RATE_HOTEL=2e-4
+
 DROP_OUT = 0.2
 
 LEARNING_RATE=1e-4
