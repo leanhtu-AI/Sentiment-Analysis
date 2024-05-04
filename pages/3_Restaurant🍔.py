@@ -10,7 +10,7 @@ from streamlit_lottie import st_lottie
 import time
 import pandas as pd
 import os
-from preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency
+from preprocess_user_data import auto_detect_filter_data, sentiments_frequency, take_info_res
 from preprocess_user_data import preprocess_data
 from tokenizer import tokenize_function, call_tokenizer, PRETRAINED_MODEL
 from preprocess_text import preprocess
@@ -105,14 +105,14 @@ if choice == 'Upload':
         st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
 
     elif not st.session_state.file_uploaded:
-        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo = pd.read_csv("data/res/restaurant_demo.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
         st.session_state.file_uploaded = True
 
     elif st.session_state.file_uploaded and file is None:
-        df_demo = pd.read_csv("data/RawData/tikiData/tikiData_small.csv")
+        df_demo = pd.read_csv("data/res/restaurant_demo.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
@@ -165,7 +165,7 @@ elif choice == "More information":
             st.dataframe(nan_rows)
         st.divider()
         st.subheader("Let's Explore Your Data")
-        aspect_df = take_info(df)
+        aspect_df = take_info_res(df)
         # Example list of sorted top aspect names
         top_aspect_names = aspect_df.nlargest(3, 'Frequency')['Aspect'].tolist()
         sorted_top_aspect_names = aspect_df[aspect_df['Aspect'].isin(top_aspect_names)].sort_values(by='Frequency', ascending=False)['Aspect'].tolist()
@@ -176,7 +176,7 @@ elif choice == "More information":
         html_str = html_str[:-1]  # Remove the last comma
         html_str += "💕</p>"
         # Display the HTML string using st.markdown()
-        st.markdown(html_str, unsafe_allow_html=True)        
+        st.markdown(html_str, unsafe_allow_html=True) 
         plot_aspect_frequency(aspect_df)
         st.divider()
         sentiment_df = sentiments_frequency(df)

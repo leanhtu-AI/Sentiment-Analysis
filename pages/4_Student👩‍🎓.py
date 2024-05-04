@@ -10,11 +10,11 @@ from streamlit_lottie import st_lottie
 import time
 import pandas as pd
 import os
-from preprocess_user_data import auto_detect_filter_data, take_info_phone, sentiments_frequency
+from preprocess_user_data import auto_detect_filter_data, take_info_stu, sentiments_frequency
 from preprocess_user_data import preprocess_data
 from tokenizer import tokenize_function, call_tokenizer, PRETRAINED_MODEL
 from preprocess_text import preprocess
-from predict_phone import show_predict_text,process_predict_csv, show_predict_csv
+from predict_student import show_predict_text,process_predict_csv, show_predict_csv
 import matplotlib.pyplot as plt
 import seaborn as sns
 from annotated_text import annotated_text
@@ -105,14 +105,14 @@ if choice == 'Upload':
         st.success("Yahoo! Your data has been uploaded successfully. Now move to the next step for preprocessing🎉")
 
     elif not st.session_state.file_uploaded:
-        df_demo = pd.read_csv("data/phone/tikiData_small.csv")
+        df_demo = pd.read_csv("data/student/demo.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
         st.session_state.file_uploaded = True
 
     elif st.session_state.file_uploaded and file is None:
-        df_demo = pd.read_csv("data/phone/tikiData_small.csv")
+        df_demo = pd.read_csv("data/student/demo.csv")
         df_demo.to_csv("data_user/source.csv", index = False)
         st.dataframe(df_demo, use_container_width=True)
         st.success("Demo file⭐")
@@ -165,7 +165,7 @@ elif choice == "More information":
             st.dataframe(nan_rows)
         st.divider()
         st.subheader("Let's Explore Your Data")
-        aspect_df = take_info_phone(df)
+        aspect_df = take_info_stu(df)
         # Example list of sorted top aspect names
         top_aspect_names = aspect_df.nlargest(3, 'Frequency')['Aspect'].tolist()
         sorted_top_aspect_names = aspect_df[aspect_df['Aspect'].isin(top_aspect_names)].sort_values(by='Frequency', ascending=False)['Aspect'].tolist()
