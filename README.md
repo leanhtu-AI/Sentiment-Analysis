@@ -45,15 +45,6 @@
 * For [hotel data](https://www.kaggle.com/datasets/quandang/vnbooking), we collect them on github which was created in ABSA-VLSP 2018 competition. 
 ### 🌊Results
  - We not change much for model, so the result is not good like on the smartphone dataset
- - Restaurant
- - Hotel
-
-Tasks | Precision | Recall  | F1-Score  
----|---|---|---
-Aspect Detection | 78.19 | 52.42 | 51.71
-Polarity Detection | 62.12 | 52.66 | 54.93
-Aspect + Polarity | 75.11 |	36.68 |	35.46
-
 - Phone
 
 Tasks | Precision | Recall  | F1-Score  
@@ -75,5 +66,13 @@ Aspect + Polarity | 80.56 |	54.09	| 56.43
 Tasks | Precision | Recall  | F1-Score  
 ---|---|---|---
 Aspect Detection | 82.82 | 48.86	| 50.27
-Polarity Detection | 62.61 | 59.90 | 98.22
+Polarity Detection | 62.61 | 59.90 | 61.11
 Aspect + Polarity | 85.56 |	61.34	| 61.58
+
+ - Restaurant
+ 
+Tasks | Precision | Recall  | F1-Score  
+---|---|---|---
+Aspect Detection | 78.19 | 52.42 | 51.71
+Polarity Detection | 62.12 | 52.66 | 54.93
+Aspect + Polarity | 75.11 |	36.68 |	35.46
