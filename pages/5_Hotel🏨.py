@@ -70,10 +70,10 @@ def plot_sentiment_frequencies(sentiment_df):
     ax.legend(sentiment_df['sentiments'], loc="upper left", bbox_to_anchor=(1, 0, 0.5, 1))
     # Display pie chart using Streamlit
     st.pyplot(fig)
-lottie_phone = load_lottiefile("lottiefiles/phone.json")
+lottie_hotel = load_lottiefile("lottiefiles/hotel.json")
 # sidebar decoration
 with st.sidebar:
-    st_lottie(lottie_phone, speed=1, loop=True, quality="low")
+    st_lottie(lottie_hotel, speed=1, loop=True, quality="low")
     st.info("Select a choice below.")
     choice = st.radio('Navigation',['Upload','Apply ABSA','More information'])
 if 'absa_applied' not in st.session_state:
@@ -84,7 +84,7 @@ if choice == 'Upload':
     st.subheader("🤖📢 Before upload, test our model if you want to know what we will do 👌")
 
     # Text input for user review about smartphone
-    user_input = st.text_input("Enter some review about your smartphone 👇", 
+    user_input = st.text_input("Enter some review about your hotel 👇", 
                           placeholder="This is a placeholder...")
 
     # Display results when user inputs text
@@ -94,10 +94,10 @@ if choice == 'Upload':
             for result in results:
                 st.write(f'=> {result}')
         else:
-            st.write("Sorry, I don't recognize any aspect of smartphone in your review")
+            st.write("Sorry, I don't recognize any aspect of hotel in your review")
     st.warning('Please ensure to fill some text before hitting enter.')  # Warning if no text is entered
     st.title("Upload your data here")
-    file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
+    file = st.file_uploader("Please notice that we just accept CSV file for now!")
     if file:
         df = pd.read_csv(file, index_col=None)
         df.to_csv("data_user/source.csv", index = False)

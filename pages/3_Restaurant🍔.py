@@ -83,7 +83,7 @@ if choice == 'Upload':
     st.subheader("🤖📢 Before upload, test our model if you want to know what we will do 👌")
 
     # Text input for user review about smartphone
-    user_input = st.text_input("Enter some review about your smartphone 👇", 
+    user_input = st.text_input("Enter some review about your restaurant 👇", 
                           placeholder="This is a placeholder...")
 
     # Display results when user inputs text
@@ -93,10 +93,10 @@ if choice == 'Upload':
             for result in results:
                 st.write(f'=> {result}')
         else:
-            st.write("Sorry, I don't recognize any aspect of smartphone in your review")
+            st.write("Sorry, I don't recognize any aspect of restaurant in your review")
     st.warning('Please ensure to fill some text before hitting enter.')  # Warning if no text is entered
     st.title("Upload your data here")
-    file = st.file_uploader("We accept various types of data. So don't worry, just go ahead!")
+    file = st.file_uploader("Please notice that we just accept CSV file for now!")
     if file:
         df = pd.read_csv(file, index_col=None)
         df.to_csv("data_user/source.csv", index = False)
