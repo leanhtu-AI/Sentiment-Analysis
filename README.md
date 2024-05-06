@@ -49,9 +49,9 @@
 
 Tasks | Precision | Recall  | F1-Score  
 ---|---|---|---
-Aspect Detection | 79.97 | 53.41 | 52.64
-Polarity Detection | 62.12 | 52.66 | 55.11
-Aspect + Polarity | 75.02 |	37.24 |	36.25
+Aspect Detection | 78.19 | 52.42 | 51.71
+Polarity Detection | 62.12 | 52.66 | 54.93
+Aspect + Polarity | 75.11 |	36.68 |	35.46
 
 - Student
 
