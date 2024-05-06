@@ -42,10 +42,11 @@
 ## 📁Data
 * For [restaurant data](https://github.com/htuannn/ABSA-VLSP2018/tree/main/data), we collect them on github which was created in ABSA-VLSP 2018 competition. 
 * For [student data](https://drive.google.com/drive/folders/1xclbjHHK58zk2X6iqbvMPS2rcy9y9E0X), we collect on the website [The UIT NLP Group](https://nlp.uit.edu.vn/datasets/)
-
+* For [hotel data](https://www.kaggle.com/datasets/quandang/vnbooking), we collect them on github which was created in ABSA-VLSP 2018 competition. 
 ### 🌊Results
  - We not change much for model, so the result is not good like on the smartphone dataset
  - Restaurant
+ - Hotel
 
 Tasks | Precision | Recall  | F1-Score  
 ---|---|---|---
@@ -53,7 +54,7 @@ Aspect Detection | 78.19 | 52.42 | 51.71
 Polarity Detection | 62.12 | 52.66 | 54.93
 Aspect + Polarity | 75.11 |	36.68 |	35.46
 
-- Student
+- Phone
 
 Tasks | Precision | Recall  | F1-Score  
 ---|---|---|---
@@ -69,4 +70,10 @@ Aspect Detection | 86.99 | 77.42	| 80.85
 Polarity Detection | 85.82 | 69.57 | 71.86
 Aspect + Polarity | 80.56 |	54.09	| 56.43
 
+- Hotel
 
+Tasks | Precision | Recall  | F1-Score  
+---|---|---|---
+Aspect Detection | 82.82 | 48.86	| 50.27
+Polarity Detection | 62.61 | 59.90 | 98.22
+Aspect + Polarity | 85.56 |	61.34	| 61.58
