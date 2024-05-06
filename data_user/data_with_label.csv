@@ -1,9 +1,27 @@
-Review,label
-"Em Min có thể giúp mình order dị ứng gluten, rất phù hợp cho những người bị dị ứng tới đây để ăn. Thức ăn ngon, giá cả hợp lí so với giá trên phố","['FOOD#PRICES,positive,0.81,5', 'FOOD#QUALITY,positive,1.00,5']"
-Nhà hàng phục vụ món ăn việt khá ngon Nhà hàng sạch sẽ nhân viên thân thiện Thích nhất món bún chả Hà Nội Giá cũng hợp lý,"['FOOD#PRICES,positive,0.74,5', 'RESTAURANT#MISCELLANEOUS,positive,0.98,5', 'AMBIENCE#GENERAL,positive,0.80,5', 'FOOD#QUALITY,positive,0.97,5']"
-"Tuyệt vời!!! Mk đặc biệt ấn tượng với món chả cá Hà Nội ở đây. Không gian nhà hàng ấm cúng, nhân viên thân thiện. I love it","['RESTAURANT#MISCELLANEOUS,positive,0.99,5', 'AMBIENCE#GENERAL,positive,0.95,5', 'FOOD#QUALITY,positive,0.93,5']"
-"Quán view đẹp, không khí ấm cúng Nhân viên thân thiện dễ thương Món ăn ngon, vừa miệng, mình đặc biệt thích món bún chả ở đây, nhất định sẽ ghé qua đây thêm vài lần nữa <3","['RESTAURANT#MISCELLANEOUS,positive,0.96,5', 'RESTAURANT#GENERAL,positive,0.78,5', 'AMBIENCE#GENERAL,positive,0.93,5', 'FOOD#QUALITY,positive,0.95,5']"
-Cuối cùng là một nhà hàng thuần chay ở Hà Nội. Tôi Anda chồng tôi đã ăn ở nhà hàng này tối nay và mỗi đĩa được chọn đều rất ngon. Chúng tôi đã được phục vụ rất nhanh và những người phục vụ rất nhẹ nhàng. Chúng tôi sẽ trở lại.,"['RESTAURANT#MISCELLANEOUS,positive,0.96,5', 'RESTAURANT#GENERAL,positive,0.91,5', 'FOOD#QUALITY,positive,0.95,5']"
-"Đồ ăn ở Met rất ngon và dịch vụ rất tuyệt, mọi người rất tốt bụng và chu đáo. Btw: nước ép nhiệt đới rất tốt","['RESTAURANT#MISCELLANEOUS,positive,0.99,5', 'FOOD#QUALITY,positive,0.81,5']"
-"Đây là lần thứ hai tôi đến nhà hàng tuyệt vời này và chất lượng vẫn như cũ. . . . tuyệt diệu. Các nhân viên là siêu thân thiện và chào đón. Tôi hoàn toàn khuyên bạn, bạn sẽ không thất vọng.","['RESTAURANT#MISCELLANEOUS,positive,0.95,5', 'RESTAURANT#GENERAL,positive,0.80,5', 'FOOD#QUALITY,positive,0.95,5']"
-"Không được đánh giá cao hoặc thấp nhưng đây là kinh nghiệm của tôi khi ăn tại nhà hàng Met. Điều thú vị là nhà hàng nằm gần hồ Hoàn Kiếm chỉ 2 phút đi bộ, gần nhà thờ lớn cách đó 4 phút. Mặc dù nằm ngay trên đường nhưng tôi đã thực sự ấn tượng bởi bầu không khí yên bình, nhẹ nhàng bên trong giống như không gian của riêng tôi ha haaa. Thái độ nhân viên khá tốt, nhiệt tình và tươi cười và đặc biệt là họ dạy tôi nói xin chào, cảm ơn, dạy tôi cách đếm số từ 1 đến 10. Tôi thích bánh xèo thuần chay của nhà hàng, thích cách ăn điển hình của người Hà Nội kết hợp rau, bún và bánh xèo với nước chấm. I Illll trở lại và thưởng thức các món ăn Việt Nam như thịt lợn nướng truyền thống Hà Nội, cá chiên truyền thống Hà Nội, chả giò với tôm & thịt lợn. . . . Tuyệt vời tuyệt vời! ! !","['FOOD#STYLE&OPTIONS,positive,0.71,5', 'RESTAURANT#MISCELLANEOUS,positive,0.95,5', 'LOCATION#GENERAL,positive,0.62,5', 'AMBIENCE#GENERAL,positive,0.91,5', 'FOOD#QUALITY,positive,0.93,5']"
+"Chủ thân thiện, phòng sạch sẽ.",label
+Nhân viên không nói rõ là nước uống sẽ thanh toán khi check out mặc dù trước khi lấy mình có hỏi rõ.,"['SERVICE#GENERAL,negative,0.99,1']"
+Thái độ của nhân viên rất thân thiện,"['SERVICE#GENERAL,positive,0.96,5']"
+Nhân viên lễ tân rất dễ thương và nhiệt tình.,"['SERVICE#GENERAL,positive,0.99,5']"
+"Ngay trung tâm, tiện đi lại tham quan","['LOCATION#GENERAL,positive,1.00,5']"
+"Mọi thứ điều tốt,tôi sẽ quay lại","['HOTEL#GENERAL,positive,1.00,5']"
+"Mà lần này quay lại bác ít nói chiện, chắc quên mình sau 1 năm quay lại kkk mà hem sao vẫn sẽ comeback khi tới vũn tào 😋😋","['HOTEL#GENERAL,positive,0.97,5']"
+"Nhân viên thực sự rất ok, phòng rất đẹp đúng như hình","['ROOMS#CLEANLINESS,positive,0.67,5', 'ROOMS#DESIGN&FEATURES,positive,1.00,5', 'SERVICE#GENERAL,positive,0.97,5']"
+"Bồn rửa mặt thoát nước chậm, nhà vệ sinh và nhà tắm riêng nên hơi bất tiện, phòng cảm giác lạnh lẽo.","['ROOMS#COMFORT,negative,0.60,1']"
+"Ít móc treo đồ, chưa có ấm đun, nên bổ sung nước trong tủ lạnh","['ROOM_AMENITIES#DESIGN&FEATURES,negative,0.99,1']"
+"Vị trí thuận lợi để đi bãi trước, bãi sau, các khu ăn uống.","['LOCATION#GENERAL,positive,1.00,5']"
+Vị trí khá thuận lợi đi du lịch các điểm trong TPVT.,"['LOCATION#GENERAL,positive,1.00,5']"
+"Gần biển, đông đúc, thoải mái, lễ tân nhiệt tình vui vẻ","['LOCATION#GENERAL,positive,0.95,5', 'SERVICE#GENERAL,positive,0.98,5']"
+Mình sẽ giới thiệu ks của bạn cho bạn bè của mình.,"['HOTEL#GENERAL,positive,1.00,5']"
+"Phòng đầy đủ tiện nghi, nhà vệ sinh thiết kế đẹp!","['ROOMS#DESIGN&FEATURES,positive,1.00,5']"
+Lê tân là dễ thương nhất.,"['SERVICE#GENERAL,positive,0.89,5']"
+Phòng gym nhỏ quá,"['ROOMS#DESIGN&FEATURES,negative,0.94,1']"
+Mọi thứ đều rất tốt.,"['HOTEL#GENERAL,positive,1.00,5']"
+Laptop không kết nối được wifi nên hơi bực ( lỗi wifi).,"['FACILITIES#QUALITY,negative,0.90,1']"
+"Tuy vậy, khách sạn không có lời giải thích nào hay thông báo mong khách thông cảm.","['SERVICE#GENERAL,negative,0.99,1']"
+"Mình thích phòng tắm rất đẹp, có ban công thoải mái, rất tiện cho việc phơi đồ tắm.","['ROOMS#DESIGN&FEATURES,positive,0.98,5']"
+Khách sạn cần cải thiện vệ sinh.,"['HOTEL#CLEANLINESS,negative,0.51,2']"
+"Phòng sạch sẽ, thiết kế với gam màu đẹp như ảnh.","['ROOMS#CLEANLINESS,positive,0.98,5', 'ROOMS#DESIGN&FEATURES,positive,1.00,5']"
+Vị trí rất tốt.,"['LOCATION#GENERAL,positive,1.00,5']"
+"Vòi tắm thì nước chảy tọt tọt đã v còn mất nước nóng, thang máy đi cảm thấy sợ chết vl","['ROOM_AMENITIES#QUALITY,negative,0.69,1']"
+Giá cả phải chăng,"['HOTEL#PRICES,positive,0.98,5']"
+Gần khu ăn uống.,"['LOCATION#GENERAL,positive,1.00,5']"
