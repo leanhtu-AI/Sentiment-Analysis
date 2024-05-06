@@ -178,8 +178,10 @@ elif choice == "More information":
         html_str = html_str[:-1]  # Remove the last comma
         html_str += "💕</p>"
         # Display the HTML string using st.markdown()
-        st.markdown(html_str, unsafe_allow_html=True)        
-        st.dataframe(aspect_df)
+        st.markdown(html_str, unsafe_allow_html=True) 
+        aspect_df_sorted = aspect_df.sort_values(by='Frequency', ascending=False)
+        st.dataframe(aspect_df_sorted)       
+        # st.dataframe(aspect_df)
         st.divider()
         sentiment_df = sentiments_frequency(df)
         total_sentiment = sentiment_df.iloc[:, 1].sum()  # Access the values of the second column and calculate their sum
