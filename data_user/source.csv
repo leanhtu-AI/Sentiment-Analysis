@@ -1,101 +1,27 @@
-sentence,sentiment,topic
-Đội ngũ bảo trì quá thưa thớt dẫn đến không đảm bảo được chất lượng sửa chữa thiết bị.,negative,facility
-Phương pháp giảng dạy phù hợp với các đối tượng sinh viên khác nhau.,neutral,curriculum
-Chương trình học giúp tôi trở thành một chuyên gia trong lĩnh vực của mình.,positive,curriculum
-Tôi nghĩ rằng chương trình đào tạo có thể có thêm các môn học về lịch sử và văn hóa để sinh viên hiểu rõ hơn về đất nước và con người Việt Nam,neutral,curriculum
-Chị ấy luôn tỉ mỉ trong công việc.,neutral,others
-Tôi không thích giảng viên này vì anh ta không có kỷ luật.,negative,lecturer
-Giảng viên này quá yêu cầu với sinh viên khiến họ không thể tự do học tập.,negative,lecturer
-Anh bạn là người luôn tôn trọng ý kiến của người khác và dễ chịu hơn bao giờ hết.,positive,others
-Thầy này là một người giáo viên rất tuyệt vời.,positive,lecturer
-Thầy luôn đặt mục tiêu rõ ràng cho học viên nên học viên biết mình phải làm gì để đạt được điểm cao.,positive,lecturer
-"Các phòng thực hành về kiến trúc và xây dựng rất đầy đủ và chuyên nghiệp, giúp tôi nâng cao kỹ năng thiết kế và xây dựng.",positive,facility
-"Phòng học tập tại trường rất thoáng và có ánh sáng tự nhiên, giúp tôi tập trung và học tập hiệu quả hơn.",positive,facility
-"Cô ấy là một người rất linh hoạt và đa tài, luôn sẵn sàng dẫn đầu nhóm trong các dự án khác nhau.",positive,others
-Thầy rất kiên nhẫn và sẵn sàng phải giải đáp những thắc mắc của sinh viên nhiều lần.,positive,lecturer
-Các phòng thí nghiệm tại trường được trang bị đầy đủ và là nơi lý tưởng để học tập và nghiên cứu.,positive,facility
-Thầy giúp đỡ sinh viên trở nên tự tin và khả năng phân tích được đánh giá cao.,positive,lecturer
-Phòng học quá tối.,negative,facility
-Chương trình học của trường rất đa dạng và bao gồm nhiều ngành học hấp dẫn.,neutral,curriculum
-Cô ấy rất nhanh nhẹn và dễ mến.,neutral,others
-Chương trình đào tạo giúp tôi nâng cao kỹ năng tư duy logic và phản biện.,positive,curriculum
-Bạn của tôi luôn làm việc với chữ tín và trung thực.,positive,others
-Thầy thường sử dụng các trò chơi và hoạt động để giúp sinh viên học tập tích cực hơn.,neutral,lecturer
-Có những sinh viên đánh giá khách quan và đưa ra các ý kiến xây dựng sau mỗi bài học.,neutral,others
-Cô ấy rất cẩn thận và chi tiết.,neutral,others
-Các cơ sở vật chất tại đây khá đầy đủ.,neutral,facility
-Thiếu trạm xe buýt hoặc tuyến xe bus gần đó.,negative,facility
-"Các câu hỏi và nhiệm vụ được thiết kế rất thú vị, giúp các em tập trung hơn trong quá trình học tập.",positive,curriculum
-Cô ấy là một người rất tỉ mỉ và chăm chỉ trong công việc.,neutral,others
-"Thầy/cô rất tận tâm với từng sinh viên, chú trọng phát triển tối đa tiềm năng của mỗi người.",positive,lecturer
-"Anh ta thường làm việc chỉ cho lợi ích cá nhân, không suy nghĩ tới lợi ích nhóm.",negative,others
-Giờ học của thầy luôn trôi chảy và hiệu quả.,positive,lecturer
-The university provides a comfortable and conducive environment for learning.,neutral,facility
-Tôi học được nhiều điều mới mẻ trong quá trình học và có thể áp dụng vào công việc của mình trong tương lai.,positive,curriculum
-Anh ấy rất ích kỷ và luôn tìm cách chỉ trích người khác.,negative,others
-Thầy luôn đón tiếp và trả lời thắc mắc của chúng tôi một cách tận tình.,positive,lecturer
-Thầy sử dụng nhiều công nghệ và phương tiện học tập hiện đại để giảng dạy.,neutral,lecturer
-Anh ta không đáng để tin tưởng.,negative,others
-Giáo trình cần được cập nhật về các công nghệ mới trong ngành nghề.,neutral,curriculum
-Thiết bị và trang thiết bị của trường rất chất lượng và đáp ứng được các nhu cầu học tập của tôi.,positive,facility
-Tôi luôn cảm thấy được giúp đỡ và hỗ trợ khi làm việc và học tập với bạn của tôi.,positive,others
-Thầy/Cô là người có kinh nghiệm và kiến thức sâu rộng trong lĩnh vực giảng dạy.,positive,others
-Đội ngũ nhân viên cơ sở vật chất và an ninh của trường rất tận tâm và chuyên nghiệp.,neutral,facility
-Ký túc xá của trường có nhiều phòng học chung rất thú vị và tiện lợi.,positive,facility
-Thầy rất thấu hiểu và đồng cảm với sinh viên.,neutral,lecturer
-Giảng viên rất tốt và đóng góp tích cực cho sự phát triển của sinh viên.,neutral,lecturer
-Cô bạn đó rất lười biếng và không bao giờ làm việc đúng hạn.,negative,others
-Giảng viên đưa ra các công cụ học tập mới để giúp cho sinh viên học tập hiệu quả hơn.,neutral,lecturer
-Các giảng viên tại trường tôi thật tốt và xuất sắc trong việc truyền đạt kiến thức. Tôi rất tự hào khi là sinh viên của họ.,positive,lecturer
-Chương trình đào tạo chất lượng và đa dạng.,neutral,curriculum
-Chương trình đào tạo được tối ưu hóa để giúp sinh viên không bỏ lỡ bất kỳ triển vọng nào trên con đường phát triển nghề nghiệp.,positive,curriculum
-Anh chàng này có tính cách dễ gần và thân thiện với mọi người.,positive,others
-Đại học này có các cơ sở vật chất hiện đại và đầy đủ tiện nghi.,positive,curriculum
-"Khu vực để xe đạp được bố trí thuận tiện, giúp cho sinh viên có thể đến trường bằng xe đạp trong sự an toàn.",positive,facility
-"Thầy cô này đôi lúc phân tích quá chi tiết, khiến cho học sinh khó tóm tắt được ý chính.",neutral,lecturer
-Thầy giáo đưa ra nhiều tài liệu hữu ích để giúp sinh viên tìm hiểu sâu vấn đề.,neutral,lecturer
-"Phòng thư giãn và giải trí được bố trí đầy đủ, giúp cho các sinh viên có một không gian giải trí đầy đủ.",neutral,facility
-Trường đại học của tôi có nhiều trung tâm văn hóa và giáo dục phục vụ sinh viên.,neutral,facility
-Anh chàng này là một người rất hòa đồng và vui vẻ.,positive,others
-Có dịch vụ cho thuê xe đạp giúp sinh viên di chuyển trong khuôn viên và tiện lợi hơn.,neutral,facility
-Cô ấy không được tận tâm trong giảng dạy và người học khó hiểu kiến thức.,negative,others
-Hệ thống thư viện phong phú,neutral,facility
-"Học viên được học tập và làm việc trong môi trường năng động, thú vị và đầy sáng tạo.",positive,curriculum
-Đồng nghiệp của tôi rất thông minh và có khả năng đưa ra những lời khuyên đúng đắn.,positive,others
-Bạn của tôi là một người hết sức năng động và hoạt bát.,neutral,others
-"Giảng viên quá ít, dẫn đến không đảm bảo cho chất lượng giảng dạy.",negative,curriculum
-Thầy đề cao cách suy nghĩ độc lập và khả năng phân tích của sinh viên.,positive,lecturer
-Tôi cảm thấy hài lòng với độ khó của bài tập.,neutral,lecturer
-Người này là người rất hòa đồng và có tinh thần cởi mở.,neutral,others
-Nhà vệ sinh ở đây được giữ sạch sẽ và tiện nghi.,neutral,facility
-Tôi thấy mình có sự tiến bộ hàng ngày trong việc học tập và phát triển bản thân trong chương trình đào tạo này.,positive,curriculum
-Các phòng học không được sạch sẽ mỗi ngày.,negative,facility
-Thầy giáo đưa ra nhiều phương pháp học tập phù hợp với nhu cầu mỗi cá nhân sinh viên.,neutral,lecturer
-Thầy giúp đỡ sinh viên nắm bắt được cách thức rèn luyện các kỹ năng trong lĩnh vực của mình.,positive,lecturer
-"Thầy cô giảng dạy đều là những chuyên gia trong lĩnh vực mình giảng dạy, giúp tôi học được nhiều kiến thức mới.",positive,curriculum
-Tôi được học những kiến thức thực tế và ứng dụng được vào công việc.,positive,curriculum
-Bạn của tôi có khả năng tự hoàn thiện mình một cách tuyệt vời.,positive,others
-Bạn của tôi rất chăm chỉ và luôn hoàn thành công việc đúng giờ.,positive,others
-Tầm quan trọng của môn học được giải thích rõ ràng.,positive,curriculum
-Giáo trình có sự phân chia rõ ràng giữa các khóa học và thuật ngữ chuyên ngành.,neutral,curriculum
-Tôi rất cảm kích với sự đầu tư vào các phòng máy tính hiện đại tại đây để phục vụ cho học tập của sinh viên.,positive,facility
-Các giáo viên chưa sẵn sàng giúp đỡ sinh viên nếu có bất kỳ thắc mắc nào.,negative,curriculum
-"Trường có các phòng ngủ, phòng nấu ăn riêng cho sinh viên ở xa rất thuận tiện.",neutral,facility
-"Chương trình học phát triển tư duy và kỹ năng giải quyết vấn đề, giúp tôi trở thành một người tư duy trong công việc.",positive,curriculum
-"Nhà xe của trường luôn sạch sẽ, an toàn cho xe cộ của sinh viên.",positive,facility
-Tòa nhà của trường rất cũ kỹ và không được bảo dưỡng đúng cách.,negative,facility
-"Tôi thấy rằng trường tôi chưa đầu tư đúng mức vào cơ sở vật chất, điều này dẫn đến việc giảng dạy và học tập kém hiệu quả.",negative,facility
-Trường đại học của tôi có thang máy phục vụ cho sinh viên có khó khăn về sức khỏe hoặc vận động.,neutral,facility
-Điểm bán đồ ăn nhanh nằm trong trường cung cấp cho sinh viên các loại thức ăn đa dạng.,neutral,facility
-"Đội ngũ giáo viên và nhân viên tại trường có trình độ chuyên môn cao và tận tâm với việc giảng dạy, giúp cho sinh viên có thể học tập một cách nhanh chóng và hiệu quả.",positive,facility
-Giảng viên không bao giờ trả lời email của tôi,negative,lecturer
-Anh/chị rất đáng kính trong mắt tôi.,positive,others
-Chị ấy có khả năng đưa ra các quyết định chính xác và hiệu quả.,neutral,others
-"Chương trình đào tạo có thể cần phải tăng cường hệ thống hỗ trợ sinh viên, đặc biệt là những sinh viên có hoàn cảnh khó khăn",neutral,curriculum
-Thiếu sự khuyến khích và động viên cho sinh viên đối với việc học tập.,negative,curriculum
-Không có đủ khu vực để sinh viên có thể tự do tập luyện nghệ thuật.,negative,facility
-Thầy không có sự cảm thông và sẵn sàng lắng nghe ý kiến của sinh viên.,negative,lecturer
-Chị ấy là người rất đáng tin cậy và chín chắn.,neutral,others
-The university has a good range of research facilities.,neutral,facility
-Cấu trúc của chương trình đào tạo chặt chẽ.,neutral,curriculum
-Giảng viên xây dựng một môi trường học tập thoải mái và tích cực.,neutral,l
+"Chủ thân thiện, phòng sạch sẽ.",0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.10,0.11,0.12,0.13,0.14,0.15,0.16,0.17,0.18,0.19,0.20,0.21,0.22,0.23,0.24,0.25,1,0.26,0.27,0.28,0.29,0.30,0.31,1.1
+Nhân viên không nói rõ là nước uống sẽ thanh toán khi check out mặc dù trước khi lấy mình có hỏi rõ.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Thái độ của nhân viên rất thân thiện,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Nhân viên lễ tân rất dễ thương và nhiệt tình.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"Ngay trung tâm, tiện đi lại tham quan",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Mọi thứ điều tốt,tôi sẽ quay lại",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Mà lần này quay lại bác ít nói chiện, chắc quên mình sau 1 năm quay lại kkk mà hem sao vẫn sẽ comeback khi tới vũn tào 😋😋",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Nhân viên thực sự rất ok, phòng rất đẹp đúng như hình",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"Bồn rửa mặt thoát nước chậm, nhà vệ sinh và nhà tắm riêng nên hơi bất tiện, phòng cảm giác lạnh lẽo.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0
+"Ít móc treo đồ, chưa có ấm đun, nên bổ sung nước trong tủ lạnh",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+"Vị trí thuận lợi để đi bãi trước, bãi sau, các khu ăn uống.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vị trí khá thuận lợi đi du lịch các điểm trong TPVT.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Gần biển, đông đúc, thoải mái, lễ tân nhiệt tình vui vẻ",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Mình sẽ giới thiệu ks của bạn cho bạn bè của mình.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Phòng đầy đủ tiện nghi, nhà vệ sinh thiết kế đẹp!",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0
+Lê tân là dễ thương nhất.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Phòng gym nhỏ quá,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mọi thứ đều rất tốt.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Laptop không kết nối được wifi nên hơi bực ( lỗi wifi).,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Tuy vậy, khách sạn không có lời giải thích nào hay thông báo mong khách thông cảm.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+"Mình thích phòng tắm rất đẹp, có ban công thoải mái, rất tiện cho việc phơi đồ tắm.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+Khách sạn cần cải thiện vệ sinh.,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Phòng sạch sẽ, thiết kế với gam màu đẹp như ảnh.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0
+Vị trí rất tốt.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Vòi tắm thì nước chảy tọt tọt đã v còn mất nước nóng, thang máy đi cảm thấy sợ chết vl",0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Giá cả phải chăng,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gần khu ăn uống.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
