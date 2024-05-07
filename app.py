@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 import time
 import pandas as pd
 import os
-from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency
+from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency, sentiment_bar
 from utils.preprocess_user_data import preprocess_data
 from utils.tokenizer import tokenize_function, call_tokenizer
 from utils.preprocess_text import preprocess
@@ -69,6 +69,24 @@ def plot_sentiment_frequencies(sentiment_df):
 
 lottie_ai = load_lottiefile("lottiefiles/logo.json")
 lottie_robot = load_lottiefile("lottiefiles/robot_orange.json")
+
+def plot_sentiment_bar(aspect_sentiment_df):
+    # Plot the horizontal bar chart with stacked bars
+    sns.set_palette("Set3")
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    aspect_sentiment_df[['negative', 'neutral', 'positive']].plot(kind='barh', stacked=True, ax=ax)
+    
+    # Add labels and title
+    ax.set_xlabel('Sentiment Count')
+    ax.set_ylabel('Aspect')
+    ax.set_title('Sentiment Analysis by Aspect')
+    ax.legend(title='Sentiment')
+
+    # Set y-ticks to display aspect names
+    ax.set_yticks(range(len(aspect_sentiment_df.index)))
+    ax.set_yticklabels(aspect_sentiment_df['aspect'])
+    st.pyplot(plt)
 
 # sidebar decoration
 with st.sidebar:
@@ -196,7 +214,12 @@ elif choice == "More information":
 
         st.markdown(html_str, unsafe_allow_html=True)        
         plot_sentiment_frequencies(sentiment_df)
+        st.divider()
+        
+        aspect_sentiment_df = sentiment_bar(df)
+        plot_sentiment_bar(aspect_sentiment_df)
 
+        
 elif choice == 'About us':
     st.markdown("<h1 style='text-align: center; color: black;'>About Us</h1>", unsafe_allow_html=True)
     url_company = "https://jvb-corp.com/vi/"
