@@ -2,7 +2,7 @@ import pandas as pd
 import re
 from utils.preprocess_text import preprocess
 import matplotlib.pyplot as plt
-
+import ast
 def auto_detect_filter_data(input_path, output_path):
     """
     Lọc và lưu trữ cột đánh giá từ một tệp CSV vào một tệp mới.
@@ -95,3 +95,54 @@ def sentiments_frequency(df):
     sentiments_df = pd.DataFrame(sentiment_counts.items(), columns=['sentiments', 'frequency'])
 
     return sentiments_df
+
+def sentiment_bar(df):
+    aspect_sentiment_counts = {}
+
+    # Iterate through each row of the DataFrame
+    for index, row in df.iterrows():
+        # Check if the row contains NaN values
+        if row.isnull().values.any():
+            continue
+
+        # Parse the sentiment list from the string representation
+        sentiment_list = ast.literal_eval(row['label'])
+        
+        # Iterate through each sentiment entry in the list
+        for sentiment_entry in sentiment_list:
+            aspect, sentiment, score, _ = sentiment_entry.split(",")
+            # Increment the corresponding sentiment count for the aspect and sentiment
+            if aspect not in aspect_sentiment_counts:
+                aspect_sentiment_counts[aspect] = {}
+            if sentiment not in aspect_sentiment_counts[aspect]:
+                aspect_sentiment_counts[aspect][sentiment] = 0
+            aspect_sentiment_counts[aspect][sentiment] += 1
+
+    # Create a DataFrame from the aspect sentiment counts
+    aspect_sentiment_df = pd.DataFrame(aspect_sentiment_counts).transpose().reset_index()
+
+    # Rename columns to ensure consistency
+    aspect_sentiment_df = aspect_sentiment_df.rename(columns={'index': 'aspect'})
+
+    # Ensure columns for all sentiments ('positive', 'neutral', 'negative') exist
+    for sentiment in ['positive', 'neutral', 'negative']:
+        if sentiment not in aspect_sentiment_df.columns:
+            aspect_sentiment_df[sentiment] = 0
+
+    # Fill NaN values with 0
+    aspect_sentiment_df.fillna(0, inplace=True)
+
+    # Convert sentiment counts to integers
+    aspect_sentiment_df[['positive', 'neutral', 'negative']] = aspect_sentiment_df[['positive', 'neutral', 'negative']].astype(int)
+
+    # Reorder columns
+    aspect_sentiment_df = aspect_sentiment_df[['aspect', 'neutral', 'negative','positive']]
+
+    # Calculate total sentiment count for each aspect
+    aspect_sentiment_df['total'] = aspect_sentiment_df['negative'] + aspect_sentiment_df['neutral'] + aspect_sentiment_df['positive']
+    aspect_sentiment_df = aspect_sentiment_df.sort_values(by='total', ascending=False)
+
+    # Print or return the resulting DataFrame
+    return aspect_sentiment_df
+
+    
