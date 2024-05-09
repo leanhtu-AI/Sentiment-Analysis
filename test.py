@@ -1,5 +1,3 @@
-from tensorflow.train import latest_checkpoint
-from tensorflow.keras.models import load_model
 from create_model import create_model
 from transformers import TFAutoModel
 from utils.tokenizer import PRETRAINED_MODEL
@@ -27,6 +25,3 @@ y_pred = predict_test(reloaded_model, test_tf_dataset, BATCH_SIZE, verbose=1)
 reloaded_model.evaluate(test_tf_dataset, batch_size=BATCH_SIZE, verbose=1)
 
 print_acsa_pred_test(replacements, categories, y_pred[0])
-
-
-

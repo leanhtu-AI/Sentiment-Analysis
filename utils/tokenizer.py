@@ -1,10 +1,9 @@
+import os
+import numpy as np
+import pandas as pd
 from transformers import AutoTokenizer
 from utils.preprocess_text import preprocess
-import pandas as pd
-import numpy as np
-import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-import tensorflow as tf
+
 
 PRETRAINED_MODEL = 'vinai/phobert-base'
 
