@@ -1,19 +1,15 @@
-import os
-import time
-import streamlit as st
 import json
-import requests
-from streamlit_lottie import st_lottie
-import pandas as pd
-from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency, sentiment_bar
-from utils.preprocess_user_data import preprocess_data
-from utils.tokenizer import tokenize_function, call_tokenizer
-from utils.preprocess_text import preprocess
-from predict import show_predict_text,process_predict_csv, show_predict_csv
-import matplotlib.pyplot as plt
-import seaborn as sns
-from annotated_text import annotated_text
+import time
 
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import streamlit as st
+from annotated_text import annotated_text
+from streamlit_lottie import st_lottie
+
+from predict import process_predict_csv, show_predict_csv, show_predict_text
+from utils.preprocess_user_data import auto_detect_filter_data, preprocess_data, sentiment_bar, sentiments_frequency, take_info
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
@@ -199,7 +195,7 @@ elif choice == "More information":
         top_aspect_names = aspect_df.nlargest(3, 'Frequency')['Aspect'].tolist()
         sorted_top_aspect_names = aspect_df[aspect_df['Aspect'].isin(top_aspect_names)].sort_values(by='Frequency', ascending=False)['Aspect'].tolist()
         # Create the HTML string with the sorted aspect names
-        html_str = f"<p style='color: black;'>🐙Top 3 aspects that customers are concerned about: "
+        html_str = "<p style='color: black;'>🐙Top 3 aspects that customers are concerned about: "
         for aspect in sorted_top_aspect_names:
             html_str += f" {aspect},"
         html_str = html_str[:-1]  # Remove the last comma
@@ -210,7 +206,7 @@ elif choice == "More information":
         st.divider()
         sentiment_df = sentiments_frequency(df)
         total_sentiment = sentiment_df.iloc[:, 1].sum()  # Access the values of the second column and calculate their sum
-        html_str = f"<p style='color: black;'>👽We have calculated total "
+        html_str = "<p style='color: black;'>👽We have calculated total "
         html_str += f"{total_sentiment} sentiment: "
         output = ", ".join([f"{frequency} {sentiment}s" for frequency, sentiment in zip(sentiment_df['frequency'], sentiment_df['sentiments'])])
         html_str += output
