@@ -1,10 +1,10 @@
+import os
+import time
 import streamlit as st
 import json
 import requests
 from streamlit_lottie import st_lottie
-import time
 import pandas as pd
-import os
 from utils.preprocess_user_data import auto_detect_filter_data, take_info, sentiments_frequency, sentiment_bar
 from utils.preprocess_user_data import preprocess_data
 from utils.tokenizer import tokenize_function, call_tokenizer
@@ -13,7 +13,6 @@ from predict import show_predict_text,process_predict_csv, show_predict_csv
 import matplotlib.pyplot as plt
 import seaborn as sns
 from annotated_text import annotated_text
-import time
 
 # Initialize session state for file upload status
 if 'file_uploaded' not in st.session_state:
