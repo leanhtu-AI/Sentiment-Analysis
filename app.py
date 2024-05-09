@@ -74,7 +74,7 @@ def plot_sentiment_bar(aspect_sentiment_df):
     sns.set_palette("Set3")
 
     fig, ax = plt.subplots(figsize=(10, 8))
-    aspect_sentiment_df[['negative', 'neutral', 'positive']].plot(kind='barh', stacked=True, ax=ax)
+    aspect_sentiment_df[['positive', 'negative', 'neutral']].plot(kind='barh', stacked=True, ax=ax)
     
     # Add labels and title
     ax.set_xlabel('Sentiment Count')
@@ -179,6 +179,10 @@ elif choice == "More information":
         st.warning("Please apply ABSA first!")
     else:
         st.header('Want to Deeper Understand? Ok!👌', divider='rainbow')
+        show = show_predict_csv()
+        st.dataframe(show)
+        
+        st.subheader('The dataframe below contain predict and confidence score', divider='blue')     
         df = pd.read_csv("data_user/data_with_label.csv")
         st.dataframe(df)
         len_df = len(df)
@@ -213,6 +217,7 @@ elif choice == "More information":
 
         st.markdown(html_str, unsafe_allow_html=True)        
         plot_sentiment_frequencies(sentiment_df)
+        
         st.divider()
         
         aspect_sentiment_df = sentiment_bar(df)
