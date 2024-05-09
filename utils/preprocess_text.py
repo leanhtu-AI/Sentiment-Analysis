@@ -1,9 +1,10 @@
-import regex as re
-import string
+
 import demoji
+import regex as re
 import underthesea
-from nltk import flatten
+
 from utils.word_dict import replace_list
+
 
 # Remove HTML code
 def remove_HTML(text):
@@ -17,7 +18,8 @@ def convert_unicode(text):
     charutf8 = charutf8.split('|')
     
     dic = {}
-    for i in range(len(char1252)): dic[char1252[i]] = charutf8[i]
+    for i in range(len(char1252)): 
+        dic[char1252[i]] = charutf8[i]
     return re.sub(
         r'à|á|ả|ã|ạ|ầ|ấ|ẩ|ẫ|ậ|ằ|ắ|ẳ|ẵ|ặ|è|é|ẻ|ẽ|ẹ|ề|ế|ể|ễ|ệ|ì|í|ỉ|ĩ|ị|ò|ó|ỏ|õ|ọ|ồ|ố|ổ|ỗ|ộ|ờ|ớ|ở|ỡ|ợ|ù|ú|ủ|ũ|ụ|ừ|ứ|ử|ữ|ự|ỳ|ý|ỷ|ỹ|ỵ|À|Á|Ả|Ã|Ạ|Ầ|Ấ|Ẩ|Ẫ|Ậ|Ằ|Ắ|Ẳ|Ẵ|Ặ|È|É|Ẻ|Ẽ|Ẹ|Ề|Ế|Ể|Ễ|Ệ|Ì|Í|Ỉ|Ĩ|Ị|Ò|Ó|Ỏ|Õ|Ọ|Ồ|Ố|Ổ|Ỗ|Ộ|Ờ|Ớ|Ở|Ỡ|Ợ|Ù|Ú|Ủ|Ũ|Ụ|Ừ|Ứ|Ử|Ữ|Ự|Ỳ|Ý|Ỷ|Ỹ|Ỵ',
         lambda x: dic[x.group()], text
@@ -51,15 +53,18 @@ def is_valid_vietnamese_word(word):
     for index, char in enumerate(chars):
         x, y = vowels_to_ids.get(char, (-1, -1))
         if x != -1:
-            if vowel_indexes == -1: vowel_indexes = index
+            if vowel_indexes == -1: 
+                vowel_indexes = index
             else:
-                if index - vowel_indexes != 1: return False
+                if index - vowel_indexes != 1: 
+                    return False
                 vowel_indexes = index
     return True
 
 
 def standardize_word_typing(word):
-    if not is_valid_vietnamese_word(word): return word
+    if not is_valid_vietnamese_word(word): 
+        return word
     chars = list(word)
     dau_cau = 0
     vowel_indexes = []
@@ -67,7 +72,8 @@ def standardize_word_typing(word):
 
     for index, char in enumerate(chars):
         x, y = vowels_to_ids.get(char, (-1, -1))
-        if x == -1: continue
+        if x == -1: 
+            continue
         elif x == 9:  # check qu
             if index != 0 and chars[index - 1] == 'q':
                 chars[index] = 'u'
@@ -91,8 +97,10 @@ def standardize_word_typing(word):
                 chars[1] = vowels_table[x][dau_cau]
             else:
                 x, y = vowels_to_ids.get(chars[2], (-1, -1))
-                if x != -1: chars[2] = vowels_table[x][dau_cau]
-                else: chars[1] = vowels_table[5][dau_cau] if chars[1] == 'i' else vowels_table[9][dau_cau]
+                if x != -1: 
+                    chars[2] = vowels_table[x][dau_cau]
+                else: 
+                    chars[1] = vowels_table[5][dau_cau] if chars[1] == 'i' else vowels_table[9][dau_cau]
             return ''.join(chars)
         return word
 
@@ -119,7 +127,8 @@ def standardize_sentence_typing(text):
     words = text.lower().split()
     for index, word in enumerate(words):
         cw = re.sub(r'(^\p{P}*)([p{L}.]*\p{L}+)(\p{P}*$)', r'\1/\2/\3', word).split('/')
-        if len(cw) == 3: cw[1] = standardize_word_typing(cw[1])
+        if len(cw) == 3: 
+            cw[1] = standardize_word_typing(cw[1])
         words[index] = ''.join(cw)
     return ' '.join(words)
 

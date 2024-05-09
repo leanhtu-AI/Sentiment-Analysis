@@ -1,6 +1,9 @@
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 import tensorflow as tf
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 
 def to_tensorflow_format(tokenized_dataset):
     features = tokenized_dataset.features

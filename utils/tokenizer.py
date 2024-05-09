@@ -1,9 +1,8 @@
-import os
 import numpy as np
 import pandas as pd
 from transformers import AutoTokenizer
-from utils.preprocess_text import preprocess
 
+from utils.preprocess_text import preprocess
 
 PRETRAINED_MODEL = 'vinai/phobert-base'
 
@@ -17,10 +16,14 @@ def make_outputs(df):
         row_one_hot = []
         for col in range(1, len(df.columns)):
             sentiment = df.iloc[row, col]
-            if   sentiment == 0: one_hot = [1, 0, 0, 0]
-            elif sentiment == 1: one_hot = [0, 1, 0, 0]
-            elif sentiment == 2: one_hot = [0, 0, 1, 0]
-            elif sentiment == 3: one_hot = [0, 0, 0, 1]
+            if   sentiment == 0: 
+                one_hot = [1, 0, 0, 0]
+            elif sentiment == 1: 
+                one_hot = [0, 1, 0, 0]
+            elif sentiment == 2: 
+                one_hot = [0, 0, 1, 0]
+            elif sentiment == 3: 
+                one_hot = [0, 0, 0, 1]
             row_one_hot.append(one_hot)
         outputs.append(row_one_hot)
     return np.array(outputs, dtype='uint8')    
@@ -32,12 +35,6 @@ def call_tokenizer():
 def tokenize_function(examples):
     tokenizer = call_tokenizer()
     clean_texts = [preprocess(comment) for comment in examples['comment']]
-    tokenized_inputs = tokenizer(
-        clean_texts,
-        max_length=256,
-        truncation=True,
-        padding='max_length',
-        return_tensors="tf"
-    )
+    tokenized_inputs = tokenizer(clean_texts,max_length=256,truncation=True,padding='max_length',return_tensors="tf")
 
     return tokenized_inputs

@@ -6,9 +6,9 @@ from datasets import load_dataset
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 # Local imports
-from utils.config import BATCH_SIZE, TRAIN_PATH, TEST_PATH, VAL_PATH, MODEL_PATH
-from utils.tokenizer import call_tokenizer, tokenize_function, read_csv, make_outputs
+from utils.config import BATCH_SIZE, MODEL_PATH, TEST_PATH, TRAIN_PATH, VAL_PATH
 from utils.tf_format import preprocess_tokenized_dataset
+from utils.tokenizer import call_tokenizer, make_outputs, read_csv, tokenize_function
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
