@@ -1,8 +1,13 @@
+# Standard library imports
 import os
+
+# Third-party imports
 from datasets import load_dataset
-from utils.tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
-from utils.config import BATCH_SIZE, TRAIN_PATH, TEST_PATH, VAL_PATH, MODEL_PATH
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+
+# Local imports
+from utils.config import BATCH_SIZE, TRAIN_PATH, TEST_PATH, VAL_PATH, MODEL_PATH
+from utils.tokenizer import call_tokenizer, tokenize_function, read_csv, make_outputs
 from utils.tf_format import preprocess_tokenized_dataset
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
