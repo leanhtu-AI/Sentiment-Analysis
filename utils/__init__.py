@@ -1,9 +1,29 @@
-from utils import config
-from utils import variables_phone
-from utils import preprocess_text
-from utils import preprocess_user_data
-from utils import tf_format
-from utils import tokenizer
-from utils import word_dict
-from utils import create_model
-from utils import variables_student
+# utils/__init__.py
+
+from utils import (
+    config,
+    create_model,
+    preprocess_text,
+    preprocess_user_data,
+    tf_format,
+    tokenizer,
+    variables_hotel,
+    variables_phone,
+    variables_res,
+    variables_student,
+    word_dict,
+)
+
+__all__ = [
+    'config',
+    'create_model',
+    'preprocess_text',
+    'preprocess_user_data',
+    'tf_format',
+    'tokenizer',
+    'variables_hotel',
+    'variables_phone',
+    'variables_res',
+    'variables_student',
+    'word_dict',
+]
