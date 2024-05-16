@@ -1,8 +1,8 @@
-import streamlit as st
 import json
-import requests
+
+import streamlit as st
 from streamlit_lottie import st_lottie
-import time
+
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
