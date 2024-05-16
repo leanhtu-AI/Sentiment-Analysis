@@ -1,10 +1,11 @@
-from transformers import AutoTokenizer
-from preprocess_text import preprocess
-import pandas as pd
-import numpy as np
 import os
+
+import numpy as np
+import pandas as pd
+from preprocess_text import preprocess
+from transformers import AutoTokenizer
+
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-import tensorflow as tf
 
 PRETRAINED_MODEL = 'vinai/phobert-base'
 
@@ -18,10 +19,14 @@ def make_outputs(df):
         row_one_hot = []
         for col in range(1, len(df.columns)):
             sentiment = df.iloc[row, col]
-            if   sentiment == 0: one_hot = [1, 0, 0, 0]
-            elif sentiment == 1: one_hot = [0, 1, 0, 0]
-            elif sentiment == 2: one_hot = [0, 0, 1, 0]
-            elif sentiment == 3: one_hot = [0, 0, 0, 1]
+            if   sentiment == 0: 
+                one_hot = [1, 0, 0, 0]
+            elif sentiment == 1: 
+                one_hot = [0, 1, 0, 0]
+            elif sentiment == 2: 
+                one_hot = [0, 0, 1, 0]
+            elif sentiment == 3: 
+                one_hot = [0, 0, 0, 1]
             row_one_hot.append(one_hot)
         outputs.append(row_one_hot)
     return np.array(outputs, dtype='uint8')    

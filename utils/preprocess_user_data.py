@@ -1,8 +1,10 @@
-import pandas as pd
-import re
-from preprocess_text import preprocess
-import matplotlib.pyplot as plt
 import ast
+import re
+
+import pandas as pd
+from preprocess_text import preprocess
+
+
 def auto_detect_filter_data(input_path, output_path):
     """
     Lọc và lưu trữ cột đánh giá từ một tệp CSV vào một tệp mới.

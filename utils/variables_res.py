@@ -1,13 +1,16 @@
-from datasets import load_dataset
-from tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
-from config import BATCH_SIZE, TRAIN_PATH_RES, TEST_PATH_RES, VAL_PATH_RES, MODEL_PATH
+# Standard library imports
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-import tensorflow as tf
+
+# Local imports
+from config import BATCH_SIZE, MODEL_PATH, TEST_PATH_RES, TRAIN_PATH_RES, VAL_PATH_RES
+
+# Third-party imports
+from datasets import load_dataset
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
-from tensorflow.train import CheckpointOptions
-import pandas as pd
 from tf_format import preprocess_tokenized_dataset
+from tokenizer import call_tokenizer, make_outputs, read_csv, tokenize_function
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 raw_datasets_res = load_dataset('csv', data_files={'train': TRAIN_PATH_RES, 'val': VAL_PATH_RES, 'test': TEST_PATH_RES})
 

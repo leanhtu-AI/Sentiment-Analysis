@@ -1,14 +1,12 @@
+from config import DROP_OUT, LEARNING_RATE, LEARNING_RATE_HOTEL, MAX_SEQUENCE_LENGTH, WEIGHT_DECAY
+from keras.layers import Dense, Dropout, Input, Layer, concatenate
 from keras.models import Model
-from keras.layers import Input, Dense, Dropout, concatenate
-from keras.layers import Layer
 from tensorflow.keras.optimizers import AdamW
-from transformers import TFAutoModel
-from variables_phone import df_train_phone,val_phone_dataset,train_phone_dataset
-from config import MAX_SEQUENCE_LENGTH, BATCH_SIZE, EPOCHS, WEIGHT_DECAY, LEARNING_RATE, DROP_OUT, LEARNING_RATE_HOTEL
-from tokenizer import PRETRAINED_MODEL
-from variables_res import df_train_res, val_res_dataset, train_res_dataset
-from variables_student import df_train_stu, val_stu_dataset, train_stu_dataset
-from variables_hotel import df_train_hotel, val_hotel_dataset, train_hotel_dataset
+from variables_hotel import df_train_hotel
+from variables_phone import df_train_phone
+from variables_res import df_train_res
+from variables_student import df_train_stu
+
 
 class CustomLayer(Layer):
       def __init__(self, pretrained_bert, **kwargs):

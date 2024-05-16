@@ -1,13 +1,16 @@
-from datasets import load_dataset
-from tokenizer import call_tokenizer, tokenize_function,read_csv, make_outputs
-from config import BATCH_SIZE, TRAIN_PATH_STU, TEST_PATH_STU, VAL_PATH_STU, MODEL_PATH
+# Standard library imports
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-import tensorflow as tf
+
+# Local imports
+from config import BATCH_SIZE, MODEL_PATH, TEST_PATH_STU, TRAIN_PATH_STU, VAL_PATH_STU
+
+# Third-party imports
+from datasets import load_dataset
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
-from tensorflow.train import CheckpointOptions
-import pandas as pd
 from tf_format import preprocess_tokenized_dataset
+from tokenizer import call_tokenizer, make_outputs, read_csv, tokenize_function
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 raw_datasets_stu = load_dataset('csv', data_files={'train': TRAIN_PATH_STU, 'val': VAL_PATH_STU, 'test': TEST_PATH_STU})
 
@@ -34,7 +37,7 @@ val_stu_dataset = preprocess_tokenized_dataset(tokenized_datasets['val'], tokeni
 test_stu_dataset = preprocess_tokenized_dataset(tokenized_datasets['test'],  tokenizer, y_test_stu, BATCH_SIZE)
 
 early_stopping = EarlyStopping(monitor='val_loss',patience=1, verbose=1)
-checkpoint_filepath = MODEL_PATH + '/best_v2.h5'
+checkpoint_filepath = MODEL_PATH + '/check.h5'
 
 # Define the ModelCheckpoint callback
 checkpoint_callback = ModelCheckpoint(
