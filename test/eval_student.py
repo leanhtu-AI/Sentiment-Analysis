@@ -1,13 +1,13 @@
 import sys
+
 # adding Folder_2 to the system path
 sys.path.insert(0, 'utils/')
-from tensorflow.keras.models import load_model
-from create_model import create_model_stu
-from transformers import TFAutoModel
-from tokenizer import PRETRAINED_MODEL
-from variables_student import df_test_stu, test_stu_dataset
-from config import MODEL_PATH, BATCH_SIZE
 import numpy as np
+from config import BATCH_SIZE, MODEL_PATH
+from create_model import create_model_stu
+from tokenizer import PRETRAINED_MODEL
+from transformers import TFAutoModel
+from variables_student import df_test_stu, test_stu_dataset
 
 replacements = {0: None, 3: 'positive', 1: 'negative', 2: 'neutral'}
 categories = df_test_stu.columns[1:]
@@ -16,7 +16,8 @@ categories = df_test_stu.columns[1:]
 def print_acsa_pred_test(replacements, categories, sentence_pred):
     sentiments = map(lambda x: replacements[x], sentence_pred)
     for category, sentiment in zip(categories, sentiments):
-        if sentiment: print(f'=> {category},{sentiment}')
+        if sentiment: 
+            print(f'=> {category},{sentiment}')
 def predict_test(model, inputs, batch_size=1, verbose=0):
     y_pred = model.predict(inputs, batch_size=batch_size, verbose=verbose)
     y_pred = y_pred.reshape(len(y_pred), -1, 4)
