@@ -1,7 +1,9 @@
+import json
+
 import streamlit as st
 from annotated_text import annotated_text
-import json
 from streamlit_lottie import st_lottie
+
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
