@@ -1,7 +1,6 @@
-import requests
+
 import pandas as pd
-import time
-import random
+import requests
 from tqdm import tqdm
 
 cookies = {
