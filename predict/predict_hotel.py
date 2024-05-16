@@ -1,17 +1,12 @@
-from tensorflow.train import latest_checkpoint
-from tensorflow.keras.models import load_model
-from utils.create_model import create_model_hotel
+import numpy as np
+import pandas as pd
+from tensorflow.data import Dataset
 from transformers import TFAutoModel
+
+from utils.create_model import create_model_hotel
+from utils.preprocess_text import preprocess
 from utils.tokenizer import PRETRAINED_MODEL
 from utils.variables_hotel import df_test_hotel, tokenizer
-from utils.preprocess_text import preprocess
-import numpy as np
-from tensorflow.data import Dataset
-from utils.preprocess_user_data import preprocess_data
-import pandas as pd
-import urllib.request
-import os
-import streamlit as st
 
 # web services
 # @st.cache_resource
@@ -54,7 +49,7 @@ def show_predict_text(text):
     results = []
     for i in range(len(pred)):
         absa_pred = print_acsa_pred(replacements, categories, pred[i], confidences[i])
-        if(absa_pred != None):
+        if(absa_pred is not None):
             for i in range(len(absa_pred)):
                 parts = absa_pred[i].split(',')
                 positive_value = parts[1]
@@ -87,7 +82,7 @@ def process_predict_csv(df_clean, output_csv_path):
     results = []
     for i in range(len(pred)):
         absa_pred = print_acsa_pred(replacements, categories, pred[i], confidences[i])
-        if(absa_pred != None):
+        if(absa_pred is not None):
             for i in range(len(absa_pred)):
                 parts = absa_pred[i].split(',')
                 positive_value = parts[1]
