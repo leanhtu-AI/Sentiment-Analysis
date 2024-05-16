@@ -28,7 +28,7 @@ def predict_test(model, inputs, batch_size=1, verbose=0):
 
 pretrained_bert = TFAutoModel.from_pretrained(PRETRAINED_MODEL, output_hidden_states=True)
 reloaded_model = create_model(pretrained_bert)
-reloaded_model.load_weights(f'{MODEL_PATH}/best.h5')
+reloaded_model.load_weights(f'{MODEL_PATH}/best_v2.h5')
 y_pred = predict_test(reloaded_model, test_tf_dataset, BATCH_SIZE, verbose=1)
 
 reloaded_model.evaluate(
