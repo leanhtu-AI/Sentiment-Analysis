@@ -12,6 +12,7 @@ from utils.preprocess_text import preprocess
 from utils.tokenizer import PRETRAINED_MODEL
 from utils.variables import df_test, tokenizer
 
+
 # web services
 @st.cache_resource
 def load_model():
